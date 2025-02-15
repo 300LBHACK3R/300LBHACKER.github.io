@@ -1,0 +1,165 @@
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    /* Black background for that hacker vibe */
+    color: #0f0;
+    /* Neon green text */
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.glitch {
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #0f0;
+    }
+
+    20% {
+        text-shadow: -2px -2px #0f0;
+    }
+
+    40% {
+        text-shadow: 2px -2px #0f0;
+    }
+
+    60% {
+        text-shadow: -2px 2px #0f0;
+    }
+
+    80% {
+        text-shadow: 2px 2px #0f0;
+    }
+
+    100% {
+        text-shadow: -2px -2px #0f0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.portfolio-item {
+    background: #111;
+    border: 1px solid #0f0;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-item h3 {
+    margin-bottom: 10px;
+    color: #0f0;
+}
+
+.portfolio-item p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.portfolio-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0f0;
+    text-decoration: none;
+    border: 1px solid #0f0;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+.portfolio-item a:hover {
+    background: #0f0;
+    color: #000;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background: #000;
+    /* Black background */
+    padding: 10px 20px;
+    border-bottom: 1px solid #0f0;
+    /* Neon green border at the bottom */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #0f0;
+    /* Neon green text */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+/* Hover effects */
+.nav-links a:hover {
+    color: #fff;
+    /* Bright white on hover */
+    transform: translateY(-2px);
+}
+
+/* Underline effect on hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0f0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*

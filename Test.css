@@ -1,0 +1,178 @@
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Stylish Testimonials Theme 🔥 Vintage Newspaper Theme 📰 -------*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Special+Elite&display=swap');
+
+/* Root Variables */
+:root {
+    --background-color: #F5F5F5;
+    /* Light paper gray */
+    --text-color: #222;
+    /* Dark ink black */
+    --accent-color: #A52A2A;
+    /* Deep red for slight highlights */
+    --border-color: #999;
+    /* Soft gray for dividers */
+    --font-body: "Playfair Display", serif;
+    /* Elegant serif */
+    --font-title: "Special Elite", cursive;
+    /* Typewriter font */
+}
+
+/* Body */
+body {
+    background: url('https://www.transparenttextures.com/patterns/white-wall.png');
+    background-color: var(--background-color);
+    font-family: var(--font-body);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Testimonials Container - Side by Side Layout */
+#testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* Space between boxes */
+    max-width: 1200px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    /* Allows wrapping for smaller screens */
+}
+
+/* Individual Testimonial Boxes */
+.testimonial-box {
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    text-align: left;
+    width: 45%;
+    /* Each box takes up 45% of the width */
+    min-height: 250px;
+    border-radius: 10px;
+}
+
+/* Headline Styles */
+.testimonial-box h2 {
+    font-size: 30px;
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-color);
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Bouncing Emoji Animation */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Apply animation to emoji */
+.emoji {
+    display: inline-block;
+    animation: bounce s infinite ease-in-out;
+    font-size: 1.2em;
+    /* Adjust emoji size */
+    margin: 0 5px;
+    /* Spacing around emoji */
+}
+
+/* Testimonial Text */
+.testimonial-box blockquote {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 20px 25px;
+    border-left: 5px solid var(--accent-color);
+    margin: 20px 0;
+    position: relative;
+}
+
+/* Footer */
+footer {
+    background: #fff;
+    color: var(--text-color);
+    padding: 15px;
+    font-size: 16px;
+    border-top: 2px solid var(--border-color);
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Newspaper Date */
+.newspaper-date {
+    font-family: var(--font-title);
+    font-size: 18px;
+    color: #555;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* Responsive - Stacks on Small Screens */
+@media screen and (max-width: 768px) {
+    #testimonials-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial-box {
+        width: 90%;
+        /* Full width on small screens */
+        margin: 0 auto;
+    }
+}
+
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*

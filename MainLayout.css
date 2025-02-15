@@ -1,0 +1,361 @@
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+
+
+/* Root Variables for Theme Colors */
+:root {
+    --primary-color: #00FF00;
+    /* Hacker Green */
+    --secondary-color: #B3FFB3;
+    /* Softer Green */
+    --background-color: #000000;
+    /* Black Background */
+    --accent-color: #111111;
+    /* Darker Accent */
+    --font-family: "Courier New", monospace;
+    /* Hacker Font */
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    min-height: 10vh;
+    background: radial-gradient(circle, var(--background-color) 60%, var(--accent-color) 100%);
+    border-bottom: 2px soli var(--primary-color);
+    border-radius: 75px;
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.3);
+}
+
+/* Main Title */
+.main-title {
+    font-size: clamp(5rem, 8vw, 5rem);
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
+    margin-bottom: -62px;
+    animation: neon-flicker 1.5s infinite alternate;
+    position: relative;
+    z-index: 1;
+}
+
+.main-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    filter: blur(35px);
+    opacity: 0.5;
+}
+
+/* Sub Title */
+.sub-title {
+    font-size: clamp(2rem, 4vw, 2rem);
+    color: var(--secondary-color);
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-shadow: 0 0 15px var(--secondary-color), 0 0 15px var(--secondary-color);
+    animation: neon-flicker 0.5s infinite alternate;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.hero-text-container {
+    display: flex;
+    gap: opx;
+    justify-content: space-between;
+    border-radius: 80%;
+    max-width: 1700px;
+    margin: 96px auto;
+    width: 100%;
+    height: 500px;
+    /* Adjust the height as necessary */
+}
+
+.hero-text {
+    font-size: clamp(1rem, 2vw, 4rem);
+    font-weight: bold;
+    color: var(--secondary-color);
+    line-height: 1.8;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.hero-text2{
+    font-size: clamp(1rem, 2vw, 4rem);
+    font-weight: bolder;
+    color: var(--secondary-color);
+    margin-top:70px;
+    line-height: 1.8;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* Resume Section */
+#download-my-resume a {
+    display: inline-block;
+    padding: 10px 200px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-weight: bolder;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    text-shadow: 0 0 10px #00FF00, 0 0 15px #00FF00, 0 0 20px #00FF00;
+    box-shadow: 0 0 30px #00FF00;
+    margin-top: 110px;
+    margin-bottom: 50px;
+    margin-left: 220px;
+}
+
+/* Hover Effect */
+#download-my-resume a:hover {
+    background-color: rgba(0, 255, 0, 1);
+    color: var(--background-color);
+    text-shadow: 0 0 10px rgba(0, 255, 0, 1), 0 0 20px rgba(0, 255, 0, 1);
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5);
+    transform: scale(1.2);
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Keyframes for Neon Flicker Effect */
+@keyframes neon-flicker {
+    0% {
+        text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
+        opacity: 1;
+    }
+
+    25% {
+        text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+        opacity: 0.8;
+    }
+
+    50% {
+        text-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
+        opacity: 0.7;
+    }
+
+    75% {
+        text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+        opacity: 0.9;
+    }
+
+    100% {
+        text-shadow: 0 0 30px var(--primary-color), 0 0 60px var(--primary-color);
+        opacity: 1;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    #hero {
+        padding: 40px 15px;
+    }
+
+    .hero-text-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        min-width: auto;
+        text-align: center;
+    }
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    /* Allow the content area to take up available space */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: opx;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    position: relative;
+    margin-top: auto;
+}
+
+footer ul {
+    position: relative;
+    top: 70px;
+    /* Move the nav-links down */
+}
+
+footer p {
+    position: relative;
+    top: 60px;
+    /* Move the copyright text down */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 4px;
+    background-color: transparent;
+    /* Set to transparent to remove the black box */
+    color: var(--primary-color);
+    position: relative;
+    margin-top: auto;
+}
+
+footer ul {
+    position: relative;
+    top: 70px;
+    /* Move the nav-links down */
+}
+
+footer p {
+    position: relative;
+    top: 75px;
+    /* Move the copyright text down */
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overlay styles (Only Affects the Pop-Up) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(145, 2, 2, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease;
+}
+
+.modal {
+    background: #000000;
+    padding: 2rem;
+    border-radius: 40px;
+    text-align: center;
+    max-width: 550px;
+    box-shadow: 0 0 500px;
+    animation: fadeIn 5s ease-in-out;
+}
+
+.modal h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+/* Button Container */
+.btn-container {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Buttons */
+button {
+    background: #0c0200;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-image {
+    width: 120px;
+    /* Adjust size */
+    height: 120px;
+    /* Keep it square */
+    object-fit: cover;
+    /* Ensures image fits well */
+    border-radius: 50%;
+    /* Makes it circular */
+    margin-bottom: 1rem;
+    /* Adds space below image */
+    border: 3px solid #fff;
+    /* Optional: white border for contrast */
+}
+
+.binary-text {
+    font-family: 'Courier New', monospace;
+    /* Gives it a "hacker" feel */
+    color: #00ff00;
+    /* Neon Green */
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #00b33c;
+    transform: scale(1.05);
+}
+
+/* Hide overlay when user clicks "Yes" */
+.overlay.hidden {
+    display: none !important;
+    opacity: 0;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*

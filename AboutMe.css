@@ -1,0 +1,107 @@
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/* RESET AND GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #2c3e50);
+    color: #f5f5f5;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1,
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-top: 2rem;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+/* -- PARAGRAPH STYLING. */
+p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    text-align: center;
+    color: #cccccc;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+/* -- BUTTON STYLING. */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff00ff;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    margin: 2rem auto;
+    display: block;
+}
+
+.btn:hover {
+    background-color: #ff66cc;
+    transform: scale(1.1);
+    box-shadow: 0 10px 40px rgba(255, 102, 204, 0.5);
+}
+
+/* -- ANIMATIONS. */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+
+    50% {
+        text-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*

@@ -1,0 +1,171 @@
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity😎-------*/
+/*----- 2025 Tate R.A Byers - '70s Modern Theme 🎨 -------*/
+
+:root {
+    --primary-color: #FF914D;
+    /* Warm Orange */
+    --secondary-color: #2E294E;
+    /* Deep Purple */
+    --accent-color: #FEC601;
+    /* Mustard Yellow */
+    --background-color: #FAE3C6;
+    /* Soft Cream */
+    --text-color: #3A3A3A;
+    /* Dark Grey */
+    --font-family: "Poppins", sans-serif;
+    /* Clean & Modern */
+    --heading-font: "Lobster", cursive;
+    /* Groovy Retro Font */
+}
+
+/* Body Styling */
+body {
+    background: var(--background-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+}
+
+#projects h2 {
+    font-size: 50px;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-shadow: 2px 2px var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+/* Project Cards */
+.project {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 30px;
+    margin: 20px auto;
+    width: 350px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    font-size: 28px;
+    font-family: var(--heading-font);
+    margin: 15px 0;
+    color: var(--secondary-color);
+}
+
+.project p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Project Links */
+.project-link {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    background: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--primary-color);
+}
+
+/* Project of the Month */
+#Project\ Of\ The\ Month {
+    background: var(--accent-color);
+    padding: 50px 20px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+#Project\ Of\ The\ Month h2 {
+    font-size: 48px;
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+    text-shadow: 2px 2px var(--primary-color);
+}
+
+#Project\ Of\ The\ Month p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Project of the Month Image */
+#Project\ Of\ The\ Month img {
+    max-width: 70%;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 15px;
+    font-size: 16px;
+}
+
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity😎-------*/

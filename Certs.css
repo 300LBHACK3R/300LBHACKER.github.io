@@ -1,0 +1,271 @@
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/* -- 🎨 COLOR PALETTE.  */
+/* -- 🔥 ROOT VARIABLES. */
+:root {
+    --background-light: #f4f4f4;
+    --background-dark: #121212;
+    --text-light: #222;
+    --text-dark: #e0e0e0;
+    --primary-color: #007BFF;
+    --secondary-color: #ff6b6b;
+    --highlight-color: #fbc531;
+    --glass-bg-light: rgba(255, 255, 255, 0.3);
+    --glass-bg-dark: rgba(50, 50, 50, 0.4);
+    --box-shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/*-- 🌙 DARK MODE. */
+.dark-mode {
+    --background-light: var(--background-dark);
+    --text-light: var(--text-dark);
+    --glass-bg-light: var(--glass-bg-dark);
+    --box-shadow-light: var(--box-shadow-dark);
+}
+
+/* -- 🔥 GENERAL STYLING. */
+body {
+    background: var(--background-light);
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* -- 🔵 NAVBAR. */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--glass-bg-light);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--box-shadow-light);
+    border-radius: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
+}
+
+/* -- 🔹 ACHIEVEMENTS SECTION. */
+#certs {
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.certs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cert-card {
+    background: var(--glass-bg-light);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    backdrop-filter: blur(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--box-shadow-light);
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px var(--primary-color);
+}
+
+/* -- 🌙 DARK MODE BUTTON. */
+#theme-toggle {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+#theme-toggle:hover {
+    background: var(--secondary-color);
+}
+
+/* -- 📜 FUN FACTS SECTION. */
+#fun-facts {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1.4rem;
+}
+
+.fact-item {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+/* -- 🔄 FUN FACT BUTTON. */
+#next-fact-button {
+    background: var(--highlight-color);
+    color: #222;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 80px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    transition: 1.2s ease;
+}
+
+#next-fact-button:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* -- 📌 FOOTER. */
+footer {
+    background: var(--glass-bg-light);
+    padding: 20px;
+    box-shadow: var(--box-shadow-light);
+    margin-top: 50px;
+}
+
+/* -- 📱 RESPONSIVE DESIGN. */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cert-card {
+        width: 90%;
+    }
+}
+
+/* -- 🔥 CERTIFICATES CONTAINER. */
+.certs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* -- 🏆 INDIVIDUAL CERT CARDS. */
+.cert-card {
+    background: var(--glass-bg-light);
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    height: 80px;
+    backdrop-filter: blur(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+    box-shadow: var(--box-shadow-light);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* -- 🔍 EXPAND ON HOVER, (SHOW FULL TEXT). */
+.cert-card:hover {
+    transform: scale(1.1);
+    height: 120px;
+    box-shadow: 0 10px 30px var(--primary-color);
+    font-size: 20px;
+}
+
+/* -- 📝 FULL TEXT ON HOVER. */
+.cert-card::after {
+    content: attr(data-full-text);
+    /* -- USE FULL TEXT STORED IN DATA.  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 16px;
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px;
+}
+
+/* -- 👀 FULL TEXT ON HOVER. */
+.cert-card:hover::after {
+    opacity: 1;
+}
+
+/* -- 🎯 INITIAL TEXT HIDES ON HOVER. */
+.cert-card:hover {
+    color: transparent;
+}
+
+/* -- 🌟 GLOWING BORDER FOR FACTS SECTION. */
+#fun-facts {
+    margin: 40px auto;
+    /* Centers the box */
+    padding: 20px;
+    width: 60%;
+    /* Adjust width - make it smaller */
+    max-width: 600px;
+    /* Ensures it doesn't get too big */
+    background: var(--glass-bg-light);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
+    border: 3px solid var(--highlight-color);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* -- 🔥 GLOW EFFECT ON HOVER. */
+#fun-facts:hover {
+    box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
+}
+
+/* -- 📱 RESPONSE DESIGN, ( MAKE FULL WITH ON SMALL SCREEN).*/
+@media screen and (max-width: 768px) {
+    #fun-facts {
+        width: 90%;
+    }
+}
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*

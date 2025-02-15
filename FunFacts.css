@@ -1,0 +1,158 @@
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/* Root Variables for Fun and Playful Theme */
+:root {
+    --primary-color: #00FF00;
+    /* Hacker Green */
+    --secondary-color: #a71900;
+    /* Darker Green */
+    --accent-color: #020300;
+    /* Tomato Red for contrast */
+    --text-color: #FFFFFF;
+    /* White Text */
+    --font-family: "Courier New", Courier, monospace;
+    /* Hacker Font */
+}
+
+/* Body and Global Styling */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background: #1c1c1c;
+    color: var(--text-color);
+}
+
+/* Fun Facts Section Styling */
+#fun-facts {
+    padding: 50px 0;
+    background: #2c2c2c;
+    border-radius: 60px;
+    margin: 30px auto;
+    width: 80%;
+    /* Fun Facts specific width */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Random Facts Section Styling */
+#random-facts {
+    font-size: 2.5rem;
+    padding: 30px;
+    font-weight: bolder;
+    background: #000;
+    border-radius: 100px;
+    margin: 20px auto;
+    width: 70%;
+    /* Random Facts specific width */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+#random-fact:hover {
+    transform: scale(1.1);
+}
+
+/* Fun Facts Heading */
+h2 {
+    font-size: 90px;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color), 0 0 70px var(--secondary-color);
+    margin-bottom: 90px;
+    margin-top: -10px;
+}
+
+/* Random Facts Heading */
+#random-facts h2 {
+    font-size: 50px;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color), 0 0 70px var(--accent-color);
+    margin: 40px 0;
+}
+
+/* List Styling for Fun Facts */
+.fun-facts-list,
+.random-facts-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+.fun-facts-list li {
+    font-size: 30px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    /* Fun Facts specific width */
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* List Styling for Random Facts */
+.random-facts-list li {
+    font-size: 100px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 100px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    /* Random Facts specific width */
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effects for Both Fun and Random Facts */
+.fun-facts-list li:hover,
+.random-facts-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+}
+
+.fun-facts-list li {
+    opacity: 0;
+    transition: font-weight 0.3s ease, opacity 0.5s ease, transform 0.3s ease;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: var(--text-color);
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    #fun-facts,
+    #random-facts {
+        width: 90%;
+        font-weight: bolder;
+        /* Make sections responsive */
+    }
+
+    .fun-facts-list li,
+    .random-facts-list li {
+        width: 85%;
+        font-weight: bolder;
+        /* Make lists responsive */
+    }
+}
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
