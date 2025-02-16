@@ -334,6 +334,23 @@ footer p {
         box-shadow: 0 0 20px var(--primary-color), 0 0 40px rgba(0, 255, 0, 0.7);
     }
 }
+
+/* Base styles for desktop */
+body {
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* Styles for devices with a max width of 600px (typical mobile size) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+  /* Adjust other elements as needed */
+}
+
+
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
