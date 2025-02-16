@@ -140,6 +140,13 @@ function initializeWebsite() {
 // -- CALLS INITIALIZATION, WHEN PAGE IS LOADED.
 document.addEventListener("DOMContentLoaded", initializeWebsite);
 
+ <script>
+        // Toggle Mobile Navigation
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
+
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity😎
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
