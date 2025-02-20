@@ -292,6 +292,186 @@ button:hover {
   }
 }
 
+/* Root Variables */
+:root {
+    --primary-color: #00FF00;
+    /* Hacker Green */
+    --secondary-color: #009900;
+    /* Darker Green for Active State */
+    --hover-background-color: #111111;
+    /* Slightly lighter black */
+    --text-color: #FFFFFF;
+    /* White Text */
+    --font-family: "Courier New", Courier, monospace;
+    /* Hacker Font */
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #000000, var(--hover-background-color));
+    padding: 15px 0;
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 255, 0, 0.2), 0 0 20px var(--primary-color);
+    animation: pulseGlow 2s infinite;
+    /* Pulsating Glow */
+}
+
+/* Navigation Links List */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Link Items */
+.nav-links li {
+    flex: 1 1 auto;
+    /* Auto-fit items */
+    text-align: center;
+}
+
+/* Navigation Links Styling */
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    background: var(--hover-background-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+/* Hover State */
+.nav-links a:hover {
+    background: var(--primary-color);
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--primary-color), 0 0 40px rgba(0, 255, 0, 0.7);
+}
+
+/* Active State */
+.nav-links a:active {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    transform: translateY(0);
+    box-shadow: 0 0 15px var(--secondary-color), 0 0 30px rgba(0, 153, 0, 0.6);
+}
+
+/* Focus State for Accessibility */
+.nav-links a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 15px var(--primary-color), 0 0 30px rgba(0, 255, 0, 0.6);
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+/* Pulsating Glow Animation */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px var(--primary-color), 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--primary-color), 0 0 40px rgba(0, 255, 0, 0.7);
+    }
+}
+
+/* Root Variables for Theme Colors */
+:root {
+    --primary-color: #00FF00;
+    /* Hacker Green */
+    --secondary-color: #B3FFB3;
+    /* Softer Green */
+    --background-color: #000000;
+    /* Black Background */
+    --accent-color: #111111;
+    /* Darker Accent */
+    --font-family: "Courier New", monospace;
+    /* Hacker Font */
+}
+
+/* General Reset and Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--accent-color);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+}
+
+/* Base styles for desktop */
+body {
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* Styles for devices with a max width of 600px (typical mobile size) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+  /* Adjust other elements as needed */
+}
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
