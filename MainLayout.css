@@ -416,63 +416,6 @@ button:hover {
     /* Hacker Font */
 }
 
-/* General Reset and Body Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-family);
-    color: var(--primary-color);
-    background-color: var(--background-color);
-    line-height: 1.6;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-/* Header Styles */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: var(--accent-color);
-}
-
-/* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: var(--accent-color);
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-links li a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 5px 10px;
-}
-
-/* Base styles for desktop */
-body {
-  font-size: 16px;
-  padding: 20px;
-}
-
-/* Styles for devices with a max width of 600px (typical mobile size) */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-  /* Adjust other elements as needed */
-}
-
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
