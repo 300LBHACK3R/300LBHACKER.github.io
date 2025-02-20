@@ -1,4 +1,4 @@
-*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 
@@ -111,15 +111,23 @@ body {
 /*--------------------------------------------------
   Resume Section
 --------------------------------------------------*/
+#download-my-resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    
+}
+
 #download-my-resume a {
     display: inline-block;
-    padding: 10px 200px;
+    padding: 1rem 3rem;
     background-color: var(--primary-color);
     color: var(--text-color);
     font-weight: bolder;
     text-decoration: none;
     border-radius: 50px;
-    font-size: 5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
@@ -127,7 +135,6 @@ body {
         0 0 15px var(--primary-color),
         0 0 20px var(--primary-color);
     box-shadow: 0 0 30px var(--primary-color);
-    margin: 110px 0 50px 220px;
 }
 
 #download-my-resume a:hover {
@@ -136,9 +143,8 @@ body {
     text-shadow: 0 0 10px rgba(0, 255, 0, 1),
         0 0 20px rgba(0, 255, 0, 1);
     box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
-
 /*--------------------------------------------------
   Navbar & Navigation Links
 --------------------------------------------------*/
