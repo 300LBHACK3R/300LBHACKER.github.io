@@ -16,6 +16,10 @@
   --font-family: "Courier New", Courier, monospace; /* Hacker Font */
 }
 
+body {
+  background-color: var(--background-color);
+}
+
 /*--------------------------------------------------
   Basic Reset
 --------------------------------------------------*/
