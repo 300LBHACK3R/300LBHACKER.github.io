@@ -147,6 +147,16 @@ document.addEventListener("DOMContentLoaded", initializeWebsite);
         });
     </script>
 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+});
+
+
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity😎
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
