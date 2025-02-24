@@ -1,7 +1,8 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/* -- 🎨 COLOR PALETTE & VARIABLES */
+/* -- 🎨 COLOR PALETTE.  */
+/* -- 🔥 ROOT VARIABLES. */
 :root {
     --background-light: #f4f4f4;
     --background-dark: #121212;
@@ -16,7 +17,7 @@
     --box-shadow-dark: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
-/* 🌙 DARK MODE */
+/*-- 🌙 DARK MODE. */
 .dark-mode {
     --background-light: var(--background-dark);
     --text-light: var(--text-dark);
@@ -24,7 +25,7 @@
     --box-shadow-light: var(--box-shadow-dark);
 }
 
-/* 🔥 GENERAL STYLING */
+/* -- 🔥 GENERAL STYLING. */
 body {
     background: var(--background-light);
     color: var(--text-light);
@@ -34,7 +35,7 @@ body {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* 🔵 NAVBAR */
+/* -- 🔵 NAVBAR. */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -44,10 +45,6 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow-light);
     border-radius: 10px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
 }
 
 .nav-links {
@@ -72,40 +69,37 @@ body {
     color: var(--highlight-color);
 }
 
-/* 🌍 MOBILE NAVIGATION FIX */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        display: none;
-        padding-top: 10px;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        display: flex !important;
-    }
-
-    .nav-links a {
-        padding: 15px;
-        display: block;
-        font-size: 18px;
-    }
+/* -- 🔹 ACHIEVEMENTS SECTION. */
+#certs {
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
-/* 🌙 DARK MODE BUTTON */
+.certs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cert-card {
+    background: var(--glass-bg-light);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    backdrop-filter: blur(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--box-shadow-light);
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px var(--primary-color);
+}
+
+/* -- 🌙 DARK MODE BUTTON. */
 #theme-toggle {
     background: var(--primary-color);
     color: #fff;
@@ -121,13 +115,64 @@ body {
     background: var(--secondary-color);
 }
 
-/* 🔹 ACHIEVEMENTS SECTION */
-#certs {
-    margin-top: 80px;
-    font-size: 2rem;
-    font-weight: bolder;
+/* -- 📜 FUN FACTS SECTION. */
+#fun-facts {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1.4rem;
 }
 
+.fact-item {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+/* -- 🔄 FUN FACT BUTTON. */
+#next-fact-button {
+    background: var(--highlight-color);
+    color: #222;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 80px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    transition: 1.2s ease;
+}
+
+#next-fact-button:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* -- 📌 FOOTER. */
+footer {
+    background: var(--glass-bg-light);
+    padding: 20px;
+    box-shadow: var(--box-shadow-light);
+    margin-top: 50px;
+}
+
+/* -- 📱 RESPONSIVE DESIGN. */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cert-card {
+        width: 90%;
+    }
+}
+
+/* -- 🔥 CERTIFICATES CONTAINER. */
 .certs-container {
     display: flex;
     flex-wrap: wrap;
@@ -136,7 +181,7 @@ body {
     padding: 20px;
 }
 
-/* 🏆 INDIVIDUAL CERT CARDS */
+/* -- 🏆 INDIVIDUAL CERT CARDS. */
 .cert-card {
     background: var(--glass-bg-light);
     border-radius: 15px;
@@ -155,264 +200,72 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* 🔍 EXPAND ON CLICK (Mobile & Desktop Friendly) */
-.cert-card.expanded {
-    height: auto !important;
-    font-size: 18px !important;
-    padding: 20px;
-    box-shadow: 0 10px 30px var(--primary-color);
-}
-
-/* 🔵 MOBILE NAVIGATION FIX */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        display: none; /* Hidden by default */
-        padding-top: 10px;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        display: flex !important;
-    }
-
-    .nav-links a {
-        padding: 15px;
-        display: block;
-        font-size: 18px;
-    }
-}
-
-/* 🏆 ACHIEVEMENTS CLICK FIX */
-.cert-card {
-    background: var(--glass-bg-light);
-    border-radius: 15px;
-    padding: 20px;
-    width: 280px;
-    height: auto;
-    backdrop-filter: blur(20px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease, font-size 0.3s ease;
-    box-shadow: var(--box-shadow-light);
     text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* 🔍 EXPAND ON CLICK (Mobile & Desktop Friendly) */
-.cert-card.expanded {
-    height: auto !important;
-    font-size: 18px !important;
-    padding: 20px;
+/* -- 🔍 EXPAND ON HOVER, (SHOW FULL TEXT). */
+.cert-card:hover {
+    transform: scale(1.1);
+    height: 120px;
     box-shadow: 0 10px 30px var(--primary-color);
+    font-size: 20px;
 }
 
+/* -- 📝 FULL TEXT ON HOVER. */
+.cert-card::after {
+    content: attr(data-full-text);
+    /* -- USE FULL TEXT STORED IN DATA.  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 16px;
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px;
+}
 
-/* 📜 FUN FACTS SECTION */
+/* -- 👀 FULL TEXT ON HOVER. */
+.cert-card:hover::after {
+    opacity: 1;
+}
+
+/* -- 🎯 INITIAL TEXT HIDES ON HOVER. */
+.cert-card:hover {
+    color: transparent;
+}
+
+/* -- 🌟 GLOWING BORDER FOR FACTS SECTION. */
 #fun-facts {
-    margin-top: 40px;
+    margin: 40px auto;
+    /* Centers the box */
     padding: 20px;
-    font-size: 1.4rem;
+    width: 60%;
+    /* Adjust width - make it smaller */
+    max-width: 600px;
+    /* Ensures it doesn't get too big */
     background: var(--glass-bg-light);
     border-radius: 15px;
+    text-align: center;
     box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
     border: 3px solid var(--highlight-color);
     transition: box-shadow 0.3s ease-in-out;
-    width: 60%;
-    max-width: 600px;
-    margin: 40px auto;
 }
 
-/* 🔥 GLOW EFFECT ON HOVER */
+/* -- 🔥 GLOW EFFECT ON HOVER. */
 #fun-facts:hover {
     box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
 }
 
-/* 🔄 FUN FACT BUTTON */
-#next-fact-button {
-    background: var(--highlight-color);
-    color: #222;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: 0.3s ease-in-out;
-}
-
-#next-fact-button:hover {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-/* 🌟 Smooth Fun Fact Transition */
-.fact-item {
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* 📌 FOOTER */
-footer {
-    background: var(--glass-bg-light);
-    padding: 20px;
-    box-shadow: var(--box-shadow-light);
-    margin-top: 50px;
-}
-
-/* 🌍 GENERAL RESPONSIVENESS */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .cert-card {
-        font-size: 16px;
-        padding: 15px;
-    }
-
+/* -- 📱 RESPONSE DESIGN, ( MAKE FULL WITH ON SMALL SCREEN).*/
+@media screen and (max-width: 768px) {
     #fun-facts {
         width: 90%;
-        font-size: 1.2rem;
-        padding: 15px;
     }
 }
-
-/* 📱 Mobile Navigation Optimization */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        display: none; /* Hidden by default */
-        padding-top: 10px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: rgba(0, 0, 0, 0.95);
-        text-align: center;
-        z-index: 999; /* Ensures menu is above other elements */
-        border-radius: 0 0 10px 10px;
-        padding-bottom: 10px;
-    }
-
-    .nav-links.active {
-        display: flex !important;
-    }
-
-    .nav-links a {
-        padding: 15px;
-        display: block;
-        font-size: 18px;
-    }
-
-    /* Center theme toggle on mobile */
-    #theme-toggle {
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    /* 🏆 Certificates Section */
-    .certs-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-    }
-
-    .cert-card {
-        width: 90%;
-        font-size: 16px;
-        padding: 15px;
-    }
-
-    /* 🧠 Fun Facts Section */
-    #fun-facts {
-        width: 90%;
-        font-size: 1.2rem;
-        padding: 15px;
-    }
-
-    /* 🏆 Certificates Expand on Click (Mobile Friendly) */
-    .cert-card.expanded {
-        height: auto !important;
-        font-size: 18px !important;
-        padding: 20px;
-        box-shadow: 0 10px 30px var(--primary-color);
-    }
-}
-
-/* 🌍 General Mobile Responsiveness */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .cert-card {
-        font-size: 16px;
-        padding: 15px;
-    }
-
-    /* 🧠 Fun Fact Section Optimization */
-    #fun-facts {
-        max-width: 100%;
-        font-size: 1rem;
-    }
-}
-
-/* 📌 Fixes Navigation Issues on Mobile */
-@media (max-width: 600px) {
-    .navbar {
-        position: relative;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        color: white;
-    }
-
-    .nav-links {
-        display: none; /* Initially hidden */
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex !important;
-    }
-}
-
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
