@@ -1,6 +1,6 @@
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -9,18 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const navItems = document.querySelectorAll(".nav-links a");
     const downloadBtn = document.querySelector(".resume-download-btn");
 
-    // Toggle Mobile Navigation
+    // Toggle Mobile Navigation.
     menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("active");
     });
 
-    // Close menu when a link is clicked (for mobile)
+    // Close Menu WHne Link Is clicked. (FOR MOBILE)
     navItems.forEach(link => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("active");
         });
 
-        // Smooth Scrolling for Internal Links
+        // Smooth Scrolling (INTERNAL LINKS).
         if (link.getAttribute("href").startsWith("#")) {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Resume Button Animation (Subtle Scale)
+    // Resume Button Animation.
     if (downloadBtn) {
         downloadBtn.addEventListener("mouseenter", () => {
             downloadBtn.style.transform = "scale(1.08)";
