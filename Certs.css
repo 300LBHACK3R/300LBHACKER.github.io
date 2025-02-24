@@ -1,8 +1,7 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/* -- 🎨 COLOR PALETTE.  */
-/* -- 🔥 ROOT VARIABLES. */
+/* -- 🎨 COLOR PALETTE & VARIABLES */
 :root {
     --background-light: #f4f4f4;
     --background-dark: #121212;
@@ -17,7 +16,7 @@
     --box-shadow-dark: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
-/*-- 🌙 DARK MODE. */
+/* 🌙 DARK MODE */
 .dark-mode {
     --background-light: var(--background-dark);
     --text-light: var(--text-dark);
@@ -25,7 +24,7 @@
     --box-shadow-light: var(--box-shadow-dark);
 }
 
-/* -- 🔥 GENERAL STYLING. */
+/* 🔥 GENERAL STYLING */
 body {
     background: var(--background-light);
     color: var(--text-light);
@@ -35,7 +34,7 @@ body {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* -- 🔵 NAVBAR. */
+/* 🔵 NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -45,6 +44,10 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow-light);
     border-radius: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-links {
@@ -69,37 +72,40 @@ body {
     color: var(--highlight-color);
 }
 
-/* -- 🔹 ACHIEVEMENTS SECTION. */
-#certs {
-    margin-top: 30px;
-    font-size: 2rem;
-    font-weight: bolder;
+/* 🌍 MOBILE NAVIGATION FIX */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        display: none;
+        padding-top: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        display: block;
+        font-size: 18px;
+    }
 }
 
-.certs-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.cert-card {
-    background: var(--glass-bg-light);
-    border-radius: 15px;
-    padding: 20px;
-    width: 300px;
-    backdrop-filter: blur(20px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: var(--box-shadow-light);
-}
-
-.cert-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px var(--primary-color);
-}
-
-/* -- 🌙 DARK MODE BUTTON. */
+/* 🌙 DARK MODE BUTTON */
 #theme-toggle {
     background: var(--primary-color);
     color: #fff;
@@ -115,64 +121,13 @@ body {
     background: var(--secondary-color);
 }
 
-/* -- 📜 FUN FACTS SECTION. */
-#fun-facts {
-    margin-top: 40px;
-    padding: 20px;
-    font-size: 1.4rem;
-}
-
-.fact-item {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--text-light);
-}
-
-/* -- 🔄 FUN FACT BUTTON. */
-#next-fact-button {
-    background: var(--highlight-color);
-    color: #222;
-    border: none;
-    padding: 20px 20px;
-    border-radius: 80px;
-    cursor: pointer;
+/* 🔹 ACHIEVEMENTS SECTION */
+#certs {
+    margin-top: 80px;
+    font-size: 2rem;
     font-weight: bolder;
-    font-size: 1.2rem;
-    transition: 1.2s ease;
 }
 
-#next-fact-button:hover {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-/* -- 📌 FOOTER. */
-footer {
-    background: var(--glass-bg-light);
-    padding: 20px;
-    box-shadow: var(--box-shadow-light);
-    margin-top: 50px;
-}
-
-/* -- 📱 RESPONSIVE DESIGN. */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .cert-card {
-        width: 90%;
-    }
-}
-
-/* -- 🔥 CERTIFICATES CONTAINER. */
 .certs-container {
     display: flex;
     flex-wrap: wrap;
@@ -181,7 +136,7 @@ footer {
     padding: 20px;
 }
 
-/* -- 🏆 INDIVIDUAL CERT CARDS. */
+/* 🏆 INDIVIDUAL CERT CARDS */
 .cert-card {
     background: var(--glass-bg-light);
     border-radius: 15px;
@@ -200,113 +155,68 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
-/* -- 🔍 EXPAND ON HOVER, (SHOW FULL TEXT). */
-.cert-card:hover {
-    transform: scale(1.1);
-    height: 120px;
-    box-shadow: 0 10px 30px var(--primary-color);
-    font-size: 20px;
-}
-
-/* -- 📝 FULL TEXT ON HOVER. */
-.cert-card::after {
-    content: attr(data-full-text);
-    /* -- USE FULL TEXT STORED IN DATA.  */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    font-size: 16px;
-    color: var(--text-light);
-    text-align: center;
-    padding: 10px;
-}
-
-/* -- 👀 FULL TEXT ON HOVER. */
-.cert-card:hover::after {
-    opacity: 1;
-}
-
-/* -- 🎯 INITIAL TEXT HIDES ON HOVER. */
-.cert-card:hover {
-    color: transparent;
-}
-
-/* -- 🌟 GLOWING BORDER FOR FACTS SECTION. */
-#fun-facts {
-    margin: 40px auto;
-    /* Centers the box */
+/* 🔍 EXPAND ON CLICK (Mobile & Desktop Friendly) */
+.cert-card.expanded {
+    height: auto !important;
+    font-size: 18px !important;
     padding: 20px;
-    width: 60%;
-    /* Adjust width - make it smaller */
-    max-width: 600px;
-    /* Ensures it doesn't get too big */
+    box-shadow: 0 10px 30px var(--primary-color);
+}
+
+/* 📜 FUN FACTS SECTION */
+#fun-facts {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1.4rem;
     background: var(--glass-bg-light);
     border-radius: 15px;
-    text-align: center;
     box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
     border: 3px solid var(--highlight-color);
     transition: box-shadow 0.3s ease-in-out;
+    width: 60%;
+    max-width: 600px;
+    margin: 40px auto;
 }
 
-/* -- 🔥 GLOW EFFECT ON HOVER. */
+/* 🔥 GLOW EFFECT ON HOVER */
 #fun-facts:hover {
     box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
 }
 
-/* 📱 MOBILE FIRST OPTIMIZATION */
-@media (max-width: 768px) {
-    /* Navbar */
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        display: none;
-        padding-top: 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    /* Center theme toggle on mobile */
-    #theme-toggle {
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    /* Certificates Section */
-    .certs-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-    }
-
-    .cert-card {
-        width: 90%;
-    }
-
-    /* Fun Facts Section */
-    #fun-facts {
-        width: 90%;
-        font-size: 1.2rem;
-        padding: 15px;
-    }
+/* 🔄 FUN FACT BUTTON */
+#next-fact-button {
+    background: var(--highlight-color);
+    color: #222;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
 }
 
-/* 🌍 General Responsiveness */
+#next-fact-button:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* 🌟 Smooth Fun Fact Transition */
+.fact-item {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* 📌 FOOTER */
+footer {
+    background: var(--glass-bg-light);
+    padding: 20px;
+    box-shadow: var(--box-shadow-light);
+    margin-top: 50px;
+}
+
+/* 🌍 GENERAL RESPONSIVENESS */
 @media screen and (max-width: 480px) {
     body {
         font-size: 14px;
@@ -317,21 +227,13 @@ footer {
         font-size: 16px;
         padding: 15px;
     }
-}
 
-/* 🌟 Smooth Fun Fact Transition */
-.fact-item {
-    transition: opacity 0.5s ease-in-out;
+    #fun-facts {
+        width: 90%;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
 }
-
-/* 🏆 Expand Certificates on Click (Mobile Friendly) */
-.cert-card.expanded {
-    height: auto !important;
-    font-size: 18px !important;
-    padding: 20px;
-    box-shadow: 0 10px 30px var(--primary-color);
-}
-
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
