@@ -10,16 +10,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const factElement = document.querySelector("#random-facts-list .fact-item");
     const nextFactButton = document.getElementById("next-fact-button");
 
-    // 🌟 Toggle Mobile Menu
-    menuToggle?.addEventListener("click", () => {
-        navLinks?.classList.toggle("active");
-    });
+    // 🌟 Toggle Mobile Menu (Fix: Ensure visibility toggles correctly)
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            // Ensure visibility
+            if (navLinks.classList.contains("active")) {
+                navLinks.style.display = "flex";
+            } else {
+                navLinks.style.display = "none";
+            }
+        });
+
+        // Close menu when a link is clicked (fix for mobile navigation)
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                navLinks.style.display = "none";
+            });
+        });
+    }
 
     // 🎨 Dark Mode Toggle
-    themeToggle?.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+        });
+    }
 
     // 🔄 Fun Facts Array
     const funFacts = [
@@ -35,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentFactIndex = 0;
 
-    // 🧠 Function to Update Fun Facts
+    // 🧠 Fix: Ensure First Fact Appears on Page Load
     function updateFunFact() {
         if (factElement) {
             factElement.style.opacity = 0; // Fade out effect
@@ -47,13 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // 📌 Set Initial Fun Fact when Page Loads
+    // 🛠 **Ensure first fun fact loads immediately**
     if (factElement) {
         factElement.textContent = funFacts[0];
+        factElement.style.opacity = 1;
     }
 
     // 🔄 Change Fact on Button Click
-    nextFactButton?.addEventListener("click", updateFunFact);
+    if (nextFactButton) {
+        nextFactButton.addEventListener("click", updateFunFact);
+    }
 });
 
 
