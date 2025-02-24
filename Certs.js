@@ -75,8 +75,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (nextFactButton) {
         nextFactButton.addEventListener("click", updateFunFact);
     }
-});
 
+    // 🏆 Expand Certificates on Click (Fix for mobile & desktop)
+    document.querySelectorAll(".cert-card").forEach(card => {
+        card.addEventListener("click", function () {
+            this.classList.toggle("expanded");
+        });
+    });
+});
 
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
