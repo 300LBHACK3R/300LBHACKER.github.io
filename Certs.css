@@ -260,26 +260,63 @@ footer {
     box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
 }
 
-/* -- 📱 RESPONSE DESIGN, ( MAKE FULL WITH ON SMALL SCREEN).*/
-@media screen and (max-width: 768px) {
+/* 📱 MOBILE FIRST OPTIMIZATION */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        display: none;
+        padding-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Center theme toggle on mobile */
+    #theme-toggle {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* Certificates Section */
+    .certs-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .cert-card {
+        width: 90%;
+    }
+
+    /* Fun Facts Section */
     #fun-facts {
         width: 90%;
+        font-size: 1.2rem;
+        padding: 15px;
     }
 }
 
-/* Base styles for desktop */
-body {
-  font-size: 16px;
-  padding: 20px;
-}
+/* 🌍 General Responsiveness */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
 
-/* Styles for devices with a max width of 600px (typical mobile size) */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-  /* Adjust other elements as needed */
+    .cert-card {
+        font-size: 16px;
+        padding: 15px;
+    }
 }
 
 
