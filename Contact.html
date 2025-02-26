@@ -33,14 +33,11 @@
       Feel free to download my resume on the <a href="Resume.html">Resume Page</a>.
     </p>
     
-    <!--
-      1. "action" points to FormSubmit with your email
-      2. "method" must be POST
-      3. The hidden "_next" field tells FormSubmit where to redirect after success
-      4. "_captcha" set to "false" to disable their built-in CAPTCHA
-    -->
+    <!-- FormSubmit configuration -->
     <form action="https://formsubmit.co/tatebyers@protonmail.com" method="POST">
+      <!-- Redirect to thank-you.html after submission; since all files are in the same folder, this is correct -->
       <input type="hidden" name="_next" value="thank-you.html" />
+      <!-- Disable FormSubmit's built-in CAPTCHA (optional) -->
       <input type="hidden" name="_captcha" value="false" />
 
       <input type="text" name="name" placeholder="Your Name" required />
