@@ -26,19 +26,24 @@
         </nav>
     </header>
 
-    <section id="contact-section">
-        <h2>Contact Me</h2>
-        <p>
-            Got a project in mind but lack the expertise to bring it to life? Don't worry, I'm here to help!
-            Feel free to download my resume on the <a href="Resume.html">Resume Page</a>.
-        </p>
-        <form action="SendEmail.php" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+     <section id="contact-section">
+    <h2>Contact Me</h2>
+    <p>
+      Got a project in mind but lack the expertise to bring it to life? Don't worry—I'm here to help! 
+      Feel free to download my resume on the <a href="Resume.html">Resume Page</a>.
+    </p>
+    <form action="https://formsubmit.co/tatebyers@protonmail.com" method="POST">
+      <!-- Redirect to thank-you.html after form submission -->
+      <input type="hidden" name="_next" value="thank-you.html" />
+      <!-- Optional: disable Formsubmit's built-in captcha -->
+      <input type="hidden" name="_captcha" value="false" />
+
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
     <script src="funfact.js"></script>
 
