@@ -1,6 +1,7 @@
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
 // 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
+
 <?php
 // Enable error reporting for debugging (remove in production)
 error_reporting(E_ALL);
