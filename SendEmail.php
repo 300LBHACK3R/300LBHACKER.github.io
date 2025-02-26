@@ -1,4 +1,11 @@
+// 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
+// 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
+// 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
 <?php
+// Enable error reporting for debugging (remove in production)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize inputs
     $name = htmlspecialchars(trim($_POST['name']));
@@ -33,3 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Invalid request.";
 }
 ?>
+// 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
+// 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
+// 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎
