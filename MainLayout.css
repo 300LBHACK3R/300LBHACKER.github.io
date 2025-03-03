@@ -33,27 +33,117 @@ body {
 /*--------------------------------------------------
   Enter Site Overlay.
 --------------------------------------------------*/
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95); /* Deep black for a dark hacker feel */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-/* When overlay should be hidden */
+/* Hidden state */
 .overlay.hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.modal {
+    background: rgba(10, 10, 10, 0.95); /* Semi-transparent dark mode */
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 0 40px #00ff00, 0 0 80px rgba(0, 255, 0, 0.8); /* Glowing hacker effect */
+    animation: hacker-glitch 1.5s infinite alternate;
+    border: 2px solid #00ff00;
+}
+
+/* Hacker-style title */
+.modal h2 {
+    font-size: 2rem;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    animation: text-flicker 1.5s infinite alternate;
+}
+
+/* Binary text effect */
+.binary-text {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    animation: binary-flicker 0.3s infinite alternate;
+}
+
+/* Buttons - Glitchy, Hacker Entry Buttons */
+.btn-container {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Hacker Neon Buttons */
+button {
+    background: black;
+    border: 2px solid #00ff00;
+    padding: 0.8rem 2rem;
+    color: #00ff00;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Courier New", Courier, monospace;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: #00ff00;
+    color: black;
+    box-shadow: 0 0 20px #00ff00, 0 0 40px rgba(0, 255, 0, 0.8);
+    transform: scale(1.1);
+}
+
+
+button:active {
+    background: #ff0000;
+    color: black;
+    box-shadow: 0 0 20px #ff0000, 0 0 40px rgba(255, 0, 0, 0.8);
+}
+
+
+/* Flickering Title Effect */
+@keyframes text-flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Flickering Binary Code */
+@keyframes binary-flicker {
+    0% { opacity: 1; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
+    50% { opacity: 0.6; text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000; }
+    100% { opacity: 1; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
+}
+
+/* Glitchy Modal Glow */
+@keyframes hacker-glitch {
+    0% { box-shadow: 0 0 10px #00ff00, 0 0 30px rgba(0, 255, 0, 0.7); }
+    50% { box-shadow: 0 0 20px #00ff00, 0 0 60px rgba(0, 255, 0, 0.9); }
+    100% { box-shadow: 0 0 10px #00ff00, 0 0 30px rgba(0, 255, 0, 0.7); }
 }
 
 
