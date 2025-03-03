@@ -3,7 +3,7 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 
 /*--------------------------------------------------
-  Root Variables for Theme Colors
+  Root Variables for Theme Colors.
 --------------------------------------------------*/
 :root {
     --primary-color: #00FF00; /* Hacker Green */
@@ -22,7 +22,7 @@ body {
 }
 
 /*--------------------------------------------------
-  Basic Reset
+  Basic Reset.
 --------------------------------------------------*/
 * {
     margin: 0;
@@ -31,7 +31,34 @@ body {
 }
 
 /*--------------------------------------------------
-  Hero Section
+  Enter Site Overlay.
+--------------------------------------------------*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* When overlay should be hidden */
+.overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/*--------------------------------------------------
+  Hero Section.
 --------------------------------------------------*/
 #hero {
     display: flex;
