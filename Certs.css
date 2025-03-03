@@ -2,7 +2,9 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 
-/* -- 🎨 COLOR PALETTE */
+/*--------------------------------------------------
+  🎨 COLOR PALETTE
+--------------------------------------------------*/
 :root {
     --background-light: #f4f4f4;
     --background-dark: #121212;
@@ -17,7 +19,7 @@
     --box-shadow-dark: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
-/* -- 🌙 DARK MODE */
+/* 🌙 DARK MODE */
 .dark-mode {
     --background-light: var(--background-dark);
     --text-light: var(--text-dark);
@@ -25,7 +27,9 @@
     --box-shadow-light: var(--box-shadow-dark);
 }
 
-/* -- 🔥 GENERAL STYLING */
+/*--------------------------------------------------
+  🔥 GENERAL STYLING
+--------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -41,12 +45,13 @@ body {
     color: var(--text-light);
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    margin: 0;
     line-height: 1.6;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* -- 🔵 NAVBAR */
+/*--------------------------------------------------
+  🏆 NAVBAR GLITCH EFFECTS
+--------------------------------------------------*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -54,54 +59,58 @@ body {
     padding: 15px 30px;
     background: var(--glass-bg-light);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow-light);
-    border-radius: 10px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background 0.3s ease-in-out;
 }
 
-/* -- 📌 FIX MOBILE NAVBAR */
-.menu-toggle {
-    font-size: 2rem;
-    color: var(--text-light);
-    cursor: pointer;
-    display: none;
-    background: none;
-    border: none;
+/* Glitch Animation */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    animation: glitch 1s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px var(--secondary-color); }
+    50% { text-shadow: -2px -2px var(--highlight-color); }
+    100% { text-shadow: 2px 2px var(--primary-color); }
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
-    padding: 0;
-}
-
-.nav-links li {
-    display: inline-block;
+    gap: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-light);
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
     color: var(--highlight-color);
+    transform: scale(1.1);
 }
 
-/* -- 📌 CERTIFICATIONS FIXED */
+/*--------------------------------------------------
+  🎓 CERTIFICATIONS SECTION (EXPANDABLE CARDS)
+--------------------------------------------------*/
 #certs {
     margin-top: 30px;
     font-size: 2rem;
     font-weight: bolder;
-    padding: 10px;
+    text-shadow: 2px 2px var(--highlight-color);
 }
 
+/* Certification Cards */
 .certs-container {
     display: flex;
     flex-wrap: wrap;
@@ -110,46 +119,49 @@ body {
     padding: 20px;
 }
 
-/* -- 🏆 CERTIFICATION CARDS FIXED */
 .cert-card {
     background: var(--glass-bg-light);
     border-radius: 15px;
     padding: 15px;
-    width: 300px;
+    width: 280px;
     min-height: 100px;
-    backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow-light);
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cert-card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 30px var(--primary-color);
+    background: var(--highlight-color);
+    color: #222;
 }
 
-/* -- ✅ SHOW FULL TEXT ON HOVER */
+/* Expandable Descriptions */
 .cert-card::after {
     content: attr(data-full-text);
     position: absolute;
+    bottom: 10px;
+    left: 50%;
     width: 90%;
+    transform: translateX(-50%);
     font-size: 0.9rem;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    text-align: center;
 }
 
 .cert-card:hover::after {
     opacity: 1;
 }
 
-/* -- 📌 FUN FACTS SECTION */
+/*--------------------------------------------------
+  🧠 FUN FACTS INTERACTIVE
+--------------------------------------------------*/
 #fun-facts {
     margin: 30px auto;
     padding: 15px;
@@ -162,36 +174,30 @@ body {
     border: 2px solid var(--highlight-color);
 }
 
-/* -- 📌 MOBILE FIXES */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+/* Fun Fact Button */
+#next-fact-button {
+    background: var(--highlight-color);
+    color: #222;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: var(--glass-bg-light);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        text-align: center;
-        padding: 15px 0;
-        border-radius: 0 0 10px 10px;
-        box-shadow: var(--box-shadow-light);
-    }
+#next-fact-button:hover {
+    background: var(--primary-color);
+    transform: scale(1.1);
+}
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .cert-card {
-        width: 100%;
-        min-height: auto;
-    }
+/*--------------------------------------------------
+  📌 FOOTER
+--------------------------------------------------*/
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: var(--glass-bg-light);
+    box-shadow: var(--box-shadow-light);
 }
