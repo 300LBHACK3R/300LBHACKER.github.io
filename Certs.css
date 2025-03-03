@@ -50,42 +50,34 @@ body {
 }
 
 /*--------------------------------------------------
-  🏆 NAVBAR GLITCH EFFECTS
+  🏆 NAVBAR - FULLY RESPONSIVE
 --------------------------------------------------*/
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 20px;
     background: var(--glass-bg-light);
     backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow-light);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background 0.3s ease-in-out;
 }
 
-/* Glitch Animation */
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: relative;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    animation: glitch 1s infinite alternate;
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
-@keyframes glitch {
-    0% { text-shadow: 2px 2px var(--secondary-color); }
-    50% { text-shadow: -2px -2px var(--highlight-color); }
-    100% { text-shadow: 2px 2px var(--primary-color); }
-}
-
+/* Navbar Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    padding: 0;
 }
 
 .nav-links a {
@@ -101,13 +93,12 @@ body {
 }
 
 /*--------------------------------------------------
-  🎓 CERTIFICATIONS SECTION (EXPANDABLE CARDS)
+  🎓 CERTIFICATIONS SECTION (FULLY FIXED)
 --------------------------------------------------*/
 #certs {
     margin-top: 30px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bolder;
-    text-shadow: 2px 2px var(--highlight-color);
 }
 
 /* Certification Cards */
@@ -123,7 +114,7 @@ body {
     background: var(--glass-bg-light);
     border-radius: 15px;
     padding: 15px;
-    width: 280px;
+    width: 300px;
     min-height: 100px;
     box-shadow: var(--box-shadow-light);
     text-align: center;
@@ -132,13 +123,6 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     position: relative;
-}
-
-.cert-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px var(--primary-color);
-    background: var(--highlight-color);
-    color: #222;
 }
 
 /* Expandable Descriptions */
@@ -160,7 +144,7 @@ body {
 }
 
 /*--------------------------------------------------
-  🧠 FUN FACTS INTERACTIVE
+  🧠 FUN FACTS SECTION - FULLY RESPONSIVE
 --------------------------------------------------*/
 #fun-facts {
     margin: 30px auto;
@@ -193,11 +177,37 @@ body {
 }
 
 /*--------------------------------------------------
-  📌 FOOTER
+  📌 MOBILE FIXES
 --------------------------------------------------*/
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: var(--glass-bg-light);
-    box-shadow: var(--box-shadow-light);
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--glass-bg-light);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 15px 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: var(--box-shadow-light);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .cert-card {
+        width: 100%;
+        min-height: auto;
+    }
+
+    #fun-facts {
+        width: 95%;
+    }
 }
