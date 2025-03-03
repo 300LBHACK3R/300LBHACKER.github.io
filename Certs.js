@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             navLinks.classList.toggle("active");
         });
 
-        // Close menu when a link is clicked
         document.querySelectorAll(".nav-links a").forEach(link => {
             link.addEventListener("click", () => {
                 navLinks.classList.remove("active");
@@ -46,13 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentFactIndex = 0;
 
-    // Load first fun fact
     if (factElement) {
         factElement.textContent = funFacts[0];
         factElement.style.opacity = 1;
     }
 
-    // Change Fact on Button Click
     if (nextFactButton) {
         nextFactButton.addEventListener("click", () => {
             factElement.textContent = funFacts[currentFactIndex];
