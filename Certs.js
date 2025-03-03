@@ -10,23 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const factElement = document.querySelector("#random-facts-list .fact-item");
     const nextFactButton = document.getElementById("next-fact-button");
 
-    // 🌟 Toggle Mobile Menu (Fix: Ensure visibility toggles correctly)
+    // 🌟 FIX: Toggle Mobile Menu
     if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", () => {
             navLinks.classList.toggle("active");
-            // Ensure visibility
-            if (navLinks.classList.contains("active")) {
-                navLinks.style.display = "flex";
-            } else {
-                navLinks.style.display = "none";
-            }
         });
 
-        // Close menu when a link is clicked (fix for mobile navigation)
+        // Close menu when a link is clicked
         document.querySelectorAll(".nav-links a").forEach(link => {
             link.addEventListener("click", () => {
                 navLinks.classList.remove("active");
-                navLinks.style.display = "none";
             });
         });
     }
@@ -53,30 +46,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentFactIndex = 0;
 
-    // 🧠 Fix: Ensure First Fact Appears on Page Load
+    // 🧠 Ensure First Fact Appears on Page Load
     function updateFunFact() {
         if (factElement) {
-            factElement.style.opacity = 0; // Fade out effect
+            factElement.style.opacity = 0;
             setTimeout(() => {
                 factElement.textContent = funFacts[currentFactIndex];
-                factElement.style.opacity = 1; // Fade in effect
+                factElement.style.opacity = 1;
                 currentFactIndex = (currentFactIndex + 1) % funFacts.length;
             }, 500);
         }
     }
 
-    // 🛠 **Ensure first fun fact loads immediately**
+    // Load first fun fact
     if (factElement) {
         factElement.textContent = funFacts[0];
         factElement.style.opacity = 1;
     }
 
-    // 🔄 Change Fact on Button Click
+    // Change Fact on Button Click
     if (nextFactButton) {
         nextFactButton.addEventListener("click", updateFunFact);
     }
 
-    // 🏆 Expand Certificates on Click (Fix for mobile & desktop)
+    // 🏆 Expand Certificates on Click
     document.querySelectorAll(".cert-card").forEach(card => {
         card.addEventListener("click", function () {
             this.classList.toggle("expanded");
