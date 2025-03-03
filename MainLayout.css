@@ -2,29 +2,23 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 
-
 /*--------------------------------------------------
   Root Variables for Theme Colors
 --------------------------------------------------*/
 :root {
-    --primary-color: #00FF00;
-    /* Hacker Green */
-    --secondary-color: #B3FFB3;
-    /* Softer Green */
-    --background-color: #000000;
-    /* Black Background */
-    --accent-color: #111111;
-    /* Darker Accent */
-    --hover-background-color: #111111;
-    /* For hover states */
-    --text-color: #FFFFFF;
-    /* White Text */
-    --font-family: "Courier New", Courier, monospace;
-    /* Hacker Font */
+    --primary-color: #00FF00; /* Hacker Green */
+    --secondary-color: #B3FFB3; /* Softer Green */
+    --background-color: #000000; /* Black Background */
+    --accent-color: #111111; /* Darker Accent */
+    --hover-background-color: #111111; /* For hover states */
+    --text-color: #FFFFFF; /* White Text */
+    --font-family: "Courier New", Courier, monospace; /* Hacker Font */
 }
 
 body {
     background-color: var(--background-color);
+    max-width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scroll issues */
 }
 
 /*--------------------------------------------------
@@ -45,67 +39,51 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px;
+    padding: 40px 10%; /* Reduced padding for smaller screens */
     min-height: 10vh;
     background: radial-gradient(circle, var(--background-color) 60%, var(--accent-color) 100%);
     border-bottom: 2px solid var(--primary-color);
-    border-radius: 75px;
+    border-radius: 75px; /* Will be adjusted for mobile */
     box-shadow: 0 8px 20px rgba(0, 255, 0, 0.3);
 }
 
 /* Main Title */
 .main-title {
-    font-size: clamp(5rem, 8vw, 5rem);
+    font-size: clamp(3rem, 8vw, 5rem); /* Adjusted for responsiveness */
     font-weight: bold;
     color: var(--primary-color);
     text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
-    margin-bottom: -62px;
+    margin-bottom: -20px;
     animation: neon-flicker 1.5s infinite alternate;
     position: relative;
     z-index: 1;
 }
 
-.main-title::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
-    filter: blur(35px);
-    opacity: 0.5;
-}
-
 /* Sub Title */
 .sub-title {
-    font-size: clamp(2rem, 4vw, 2rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: var(--secondary-color);
-    margin-top: 50px;
-    margin-bottom: 80px;
-    text-shadow: 0 0 15px var(--secondary-color), 0 0 15px var(--secondary-color);
-    animation: neon-flicker 0.5s infinite alternate;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-shadow: 0 0 15px var(--secondary-color);
     border-bottom: 2px solid var(--primary-color);
 }
 
 /* Hero Text */
 .hero-text,
 .hero-text2 {
-    padding: 20px 150px;
-    font-size: clamp(1rem, 2vw, 4rem);
+    padding: 20px 10%; /* Responsive padding */
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: bold;
     color: var(--secondary-color);
     line-height: 1.8;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    flex: 1;
-    min-width: 300px;
     text-align: left;
 }
 
 .hero-text2 {
     font-weight: bolder;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 /*--------------------------------------------------
@@ -116,35 +94,29 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 30vh;
-    
 }
 
 #download-my-resume a {
     display: inline-block;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: var(--text-color);
     font-weight: bolder;
     text-decoration: none;
     border-radius: 50px;
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    text-shadow: 0 0 10px var(--primary-color),
-        0 0 15px var(--primary-color),
-        0 0 20px var(--primary-color);
     box-shadow: 0 0 30px var(--primary-color);
 }
 
 #download-my-resume a:hover {
     background-color: rgba(0, 255, 0, 1);
     color: var(--background-color);
-    text-shadow: 0 0 10px rgba(0, 255, 0, 1),
-        0 0 20px rgba(0, 255, 0, 1);
-    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
+
 /*--------------------------------------------------
   Navbar & Navigation Links
 --------------------------------------------------*/
@@ -155,17 +127,12 @@ body {
     background: linear-gradient(90deg, var(--background-color), var(--hover-background-color));
     padding: 15px 0;
     border-bottom: 2px solid var(--primary-color);
-    box-shadow: 0 2px 8px rgba(0, 255, 0, 0.2),
-        0 0 20px var(--primary-color);
-    animation: pulseGlow 2s infinite;
 }
 
 .nav-links {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    padding: 0;
-    margin: 0;
     gap: 20px;
     justify-content: center;
 }
@@ -178,194 +145,19 @@ body {
 .nav-links a {
     display: inline-block;
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 10px 15px;
     background: var(--hover-background-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     border-radius: 6px;
     font-size: 1rem;
     font-family: var(--font-family);
-    text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px var(--primary-color),
-        0 0 20px rgba(0, 255, 0, 0.5);
 }
 
 .nav-links a:hover {
     background: var(--primary-color);
     color: var(--background-color);
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px var(--primary-color),
-        0 0 40px rgba(0, 255, 0, 0.7);
-}
-
-.nav-links a:active {
-    background: var(--secondary-color);
-    color: var(--text-color);
-    transform: translateY(0);
-    box-shadow: 0 0 15px var(--secondary-color),
-        0 0 30px rgba(0, 153, 0, 0.6);
-}
-
-.nav-links a:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-    box-shadow: 0 0 15px var(--primary-color),
-        0 0 30px rgba(0, 255, 0, 0.6);
-}
-
-/*--------------------------------------------------
-  Pop-Up Links with Neon Glow
---------------------------------------------------*/
-.popup-link {
-    position: relative;
-    display: inline-block;
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
-}
-
-.popup-link:hover {
-    transform: translateY(-5px);
-    text-shadow: 0 0 10px var(--primary-color),
-        0 0 20px var(--primary-color);
-}
-
-.popup-link::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-5px);
-    background: var(--accent-color);
-    color: var(--primary-color);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.popup-link:hover::after {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-10px);
-}
-
-/*--------------------------------------------------
-  Overlay & Modal
---------------------------------------------------*/
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(145, 2, 2, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    transition: opacity 0.6s ease;
-}
-
-.overlay.hidden {
-    display: none !important;
-    opacity: 0;
-}
-
-.modal {
-    background: var(--background-color);
-    padding: 2rem;
-    border-radius: 40px;
-    text-align: center;
-    max-width: 550px;
-    box-shadow: 0 0 500px;
-    animation: fadeIn 5s ease-in-out;
-}
-
-.modal h2 {
-    margin-bottom: 1rem;
-    color: var(--text-color);
-}
-
-.btn-container {
-    margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-button {
-    background: #0c0200;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    color: var(--text-color);
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background: #00b33c;
-    transform: scale(1.05);
-}
-
-.modal-image {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 3px solid var(--text-color);
-}
-
-.binary-text {
-    font-family: var(--font-family);
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/*--------------------------------------------------
-  Footer
---------------------------------------------------*/
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: transparent;
-    color: var(--primary-color);
-    position: relative;
-    margin-top: auto;
-}
-
-footer ul {
-    position: relative;
-    top: 70px;
-}
-
-footer p {
-    position: relative;
-    top: 75px;
-}
-
-/*--------------------------------------------------
-  Utility Classes
---------------------------------------------------*/
-.text-center {
-    text-align: center;
-}
-
-.mt-20 {
-    margin-top: 20px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
 }
 
 /*--------------------------------------------------
@@ -373,13 +165,14 @@ footer p {
 --------------------------------------------------*/
 @media screen and (max-width: 768px) {
     #hero {
-        padding: 40px 15px;
+        padding: 20px;
+        border-radius: 20px; /* Smaller border radius for mobile */
     }
 
     .hero-text,
     .hero-text2 {
-        min-width: auto;
         text-align: center;
+        font-size: 1rem;
     }
 
     .nav-links {
@@ -388,62 +181,37 @@ footer p {
     }
 
     .nav-links a {
-        font-size: 0.9rem;
-        padding: 10px 15px;
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .sub-title {
+        font-size: 1.2rem;
+    }
+
+    #download-my-resume a {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.5rem;
     }
 }
 
 /*--------------------------------------------------
   Keyframes & Animations
 --------------------------------------------------*/
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes neon-flicker {
     0% {
-        text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
-        opacity: 1;
+        text-shadow: 0 0 15px var(--primary-color);
     }
-
-    25% {
-        text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
-        opacity: 0.8;
-    }
-
     50% {
-        text-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
-        opacity: 0.7;
+        text-shadow: 0 0 5px var(--primary-color);
     }
-
-    75% {
-        text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
-        opacity: 0.9;
-    }
-
     100% {
-        text-shadow: 0 0 30px var(--primary-color), 0 0 60px var(--primary-color);
-        opacity: 1;
-    }
-}
-
-@keyframes pulseGlow {
-
-    0%,
-    100% {
-        box-shadow: 0 0 10px var(--primary-color), 0 0 20px rgba(0, 255, 0, 0.5);
-    }
-
-    50% {
-        box-shadow: 0 0 20px var(--primary-color), 0 0 40px rgba(0, 255, 0, 0.7);
+        text-shadow: 0 0 30px var(--primary-color);
     }
 }
 
