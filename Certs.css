@@ -62,6 +62,16 @@ body {
     z-index: 1000;
 }
 
+/* -- 📌 FIX MOBILE NAVBAR */
+.menu-toggle {
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    display: none;
+    background: none;
+    border: none;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -69,6 +79,7 @@ body {
     padding: 0;
 }
 
+/* Fix Navbar Links Display */
 .nav-links li {
     display: inline-block;
 }
@@ -84,165 +95,35 @@ body {
     color: var(--highlight-color);
 }
 
-/* -- 🌙 DARK MODE BUTTON */
-#theme-toggle {
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-size: 16px;
-}
-
-#theme-toggle:hover {
-    background: var(--secondary-color);
-}
-
-/* -- 🔹 ACHIEVEMENTS SECTION */
-#certs {
-    margin-top: 30px;
-    font-size: 2rem;
-    font-weight: bolder;
-}
-
-.certs-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.cert-card {
-    background: var(--glass-bg-light);
-    border-radius: 15px;
-    padding: 20px;
-    width: 280px;
-    height: 80px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease, font-size 0.3s ease;
-    box-shadow: var(--box-shadow-light);
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    will-change: transform, box-shadow, height, font-size;
-}
-
-.cert-card:hover {
-    transform: scale(1.05);
-    height: 120px;
-    box-shadow: 0 10px 30px var(--primary-color);
-    font-size: 20px;
-}
-
-.cert-card::after {
-    content: attr(data-full-text);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    font-size: 16px;
-    color: var(--text-light);
-    text-align: center;
-    padding: 10px;
-}
-
-.cert-card:hover::after {
-    opacity: 1;
-}
-
-.cert-card:hover {
-    color: transparent;
-}
-
-/* -- 📜 FUN FACTS SECTION */
-#fun-facts {
-    margin: 40px auto;
-    padding: 20px;
-    width: 60%;
-    max-width: 600px;
-    background: var(--glass-bg-light);
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
-    border: 3px solid var(--highlight-color);
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-#fun-facts:hover {
-    box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--primary-color);
-}
-
-.fact-item {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--text-light);
-}
-
-/* -- 🔄 FUN FACT BUTTON */
-#next-fact-button {
-    background: var(--highlight-color);
-    color: #222;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 80px;
-    cursor: pointer;
-    font-weight: bolder;
-    font-size: 1.2rem;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-#next-fact-button:hover {
-    background: var(--primary-color);
-    color: #fff;
-}
-
-/* -- 📌 FOOTER */
-footer {
-    background: var(--glass-bg-light);
-    padding: 20px;
-    box-shadow: var(--box-shadow-light);
-    margin-top: 50px;
-    text-align: center;
-}
-
-/* -- 📱 RESPONSIVE DESIGN */
+/* -- 📌 FIX RESPONSIVE NAVBAR MENU */
 @media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 20px;
+    .menu-toggle {
+        display: block;
     }
 
     .nav-links {
+        display: none;
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        width: 100%;
+        background: var(--glass-bg-light);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 15px 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: var(--box-shadow-light);
     }
 
-    .cert-card {
-        width: 90%;
+    .nav-links.active {
+        display: flex;
     }
 
-    #fun-facts {
-        width: 90%;
-        padding: 15px;
-        font-size: 1.2rem;
+    .nav-links li {
+        margin: 10px 0;
     }
 
-    #next-fact-button {
-        padding: 10px 15px;
+    .nav-links a {
         font-size: 1rem;
     }
 }
