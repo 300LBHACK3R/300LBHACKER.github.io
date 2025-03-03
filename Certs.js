@@ -4,9 +4,24 @@
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 
 document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
     const themeToggle = document.getElementById("theme-toggle");
     const factElement = document.querySelector("#random-facts-list .fact-item");
     const nextFactButton = document.getElementById("next-fact-button");
+
+    // 🌟 FIX: Toggle Mobile Menu
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
+        });
+    }
 
     // 🎨 Dark Mode Toggle
     if (themeToggle) {
@@ -28,12 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentFactIndex = 0;
 
-    // Load first fun fact
     if (factElement) {
         factElement.textContent = funFacts[0];
     }
 
-    // Change Fact on Button Click
     if (nextFactButton) {
         nextFactButton.addEventListener("click", () => {
             factElement.textContent = funFacts[currentFactIndex];
@@ -43,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
