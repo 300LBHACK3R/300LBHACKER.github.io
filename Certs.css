@@ -54,7 +54,7 @@ body {
     padding: 15px 30px;
     background: var(--glass-bg-light);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow-light);
     border-radius: 10px;
     position: sticky;
@@ -79,7 +79,6 @@ body {
     padding: 0;
 }
 
-/* Fix Navbar Links Display */
 .nav-links li {
     display: inline-block;
 }
@@ -95,10 +94,10 @@ body {
     color: var(--highlight-color);
 }
 
-/* -- 📌 FIX CERTIFICATIONS SECTION */
+/* -- 📌 CERTIFICATIONS FIXED */
 #certs {
-    margin-top: 20px;
-    font-size: 1.8rem;
+    margin-top: 30px;
+    font-size: 2rem;
     font-weight: bolder;
     padding: 10px;
 }
@@ -106,21 +105,28 @@ body {
 .certs-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
-    padding: 15px;
+    padding: 20px;
 }
 
+/* -- 🏆 CERTIFICATION CARDS FIXED */
 .cert-card {
     background: var(--glass-bg-light);
     border-radius: 15px;
-    padding: 10px;
-    width: 280px;
-    height: auto;
+    padding: 15px;
+    width: 300px;
+    min-height: 100px;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--box-shadow-light);
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -129,11 +135,18 @@ body {
     box-shadow: 0 10px 30px var(--primary-color);
 }
 
-.cert-card img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 10px;
-    margin-top: 10px;
+/* -- ✅ SHOW FULL TEXT ON HOVER */
+.cert-card::after {
+    content: attr(data-full-text);
+    position: absolute;
+    width: 90%;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cert-card:hover::after {
+    opacity: 1;
 }
 
 /* -- 📌 FUN FACTS SECTION */
@@ -149,7 +162,7 @@ body {
     border: 2px solid var(--highlight-color);
 }
 
-/* -- 📌 FIX RESPONSIVE NAVBAR MENU */
+/* -- 📌 MOBILE FIXES */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -177,17 +190,8 @@ body {
         margin: 10px 0;
     }
 
-    .nav-links a {
-        font-size: 1rem;
-    }
-
-    /* Adjust certifications */
     .cert-card {
         width: 100%;
-    }
-
-    /* Fun facts section */
-    #fun-facts {
-        width: 95%;
+        min-height: auto;
     }
 }
