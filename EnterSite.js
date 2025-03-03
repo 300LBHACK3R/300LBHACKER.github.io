@@ -8,23 +8,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const yesBtn = document.getElementById("yesBtn");
     const noBtn = document.getElementById("noBtn");
 
-    // Check if the user already entered
-    if (localStorage.getItem("ageVerified") === "true") {
-        overlay.classList.add("hidden"); // Hide overlay if already verified
+    // Only run this script if we're on index.html
+    if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
+        // Check if the user has already seen the overlay
+        if (!localStorage.getItem("ageVerified")) {
+            overlay.classList.remove("hidden"); // Show overlay if not verified
+        }
+
+        // "Enter" button hides the overlay
+        yesBtn.addEventListener("click", () => {
+            overlay.classList.add("hidden");
+            localStorage.setItem("ageVerified", "true"); // Save their choice
+        });
+
+        // "No" button gives an alert
+        noBtn.addEventListener("click", () => {
+            alert("No worries—come back whenever you’re ready!");
+        });
     } else {
-        overlay.classList.remove("hidden"); // Ensure overlay is visible
+        // Hide the overlay on all other pages
+        if (overlay) {
+            overlay.classList.add("hidden");
+        }
     }
-
-    // On clicking "Enter"
-    yesBtn.addEventListener("click", () => {
-        overlay.classList.add("hidden");
-        localStorage.setItem("ageVerified", "true");
-    });
-
-    // On clicking "No"
-    noBtn.addEventListener("click", () => {
-        alert("No worries—come back whenever you’re ready!");
-    });
 });
 
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
