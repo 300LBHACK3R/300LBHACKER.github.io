@@ -2,7 +2,6 @@
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
@@ -46,18 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentFactIndex = 0;
 
-    // 🧠 Ensure First Fact Appears on Page Load
-    function updateFunFact() {
-        if (factElement) {
-            factElement.style.opacity = 0;
-            setTimeout(() => {
-                factElement.textContent = funFacts[currentFactIndex];
-                factElement.style.opacity = 1;
-                currentFactIndex = (currentFactIndex + 1) % funFacts.length;
-            }, 500);
-        }
-    }
-
     // Load first fun fact
     if (factElement) {
         factElement.textContent = funFacts[0];
@@ -66,16 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Change Fact on Button Click
     if (nextFactButton) {
-        nextFactButton.addEventListener("click", updateFunFact);
-    }
-
-    // 🏆 Expand Certificates on Click
-    document.querySelectorAll(".cert-card").forEach(card => {
-        card.addEventListener("click", function () {
-            this.classList.toggle("expanded");
+        nextFactButton.addEventListener("click", () => {
+            factElement.textContent = funFacts[currentFactIndex];
+            currentFactIndex = (currentFactIndex + 1) % funFacts.length;
         });
-    });
+    }
 });
+
 
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
