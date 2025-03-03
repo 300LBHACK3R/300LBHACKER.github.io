@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const factElement = document.querySelector("#random-facts-list .fact-item");
     const nextFactButton = document.getElementById("next-fact-button");
 
-    // 🌟 FIX: Toggle Mobile Menu
+    // 🌟 Toggle Mobile Menu
     if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", () => {
             navLinks.classList.toggle("active");
@@ -50,8 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (nextFactButton) {
         nextFactButton.addEventListener("click", () => {
             factElement.textContent = funFacts[currentFactIndex];
-            factElement.classList.add("fade-in");
-            setTimeout(() => factElement.classList.remove("fade-in"), 500);
             currentFactIndex = (currentFactIndex + 1) % funFacts.length;
         });
     }
