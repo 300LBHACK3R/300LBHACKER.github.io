@@ -17,6 +17,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     padding: 20px;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /*-------------------------------------------------- 
@@ -51,6 +52,7 @@ header {
     border-bottom: 2px solid #0f0;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -91,7 +93,7 @@ header {
     width: 100%;
 }
 
-/* Mobile Menu */
+/* Mobile Menu Toggle */
 .menu-toggle {
     font-size: 2rem;
     color: #0f0;
@@ -119,6 +121,7 @@ header {
     padding: 20px;
     transition: transform 0.3s ease;
     text-align: center;
+    cursor: pointer;
 }
 
 .portfolio-item:hover {
@@ -153,28 +156,64 @@ header {
   📌 RESPONSIVE DESIGN - MOBILE FIXES
 --------------------------------------------------*/
 @media (max-width: 768px) {
+    /* 📌 Adjust Navbar for Mobile */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #0f0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
         width: 100%;
         background: #000;
-        padding: 20px;
+        padding: 10px;
         border-top: 2px solid #0f0;
+        text-align: center;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
+    .nav-links li {
+        margin: 10px 0;
     }
 
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    /* 📌 Fix Portfolio Grid on Mobile */
     .portfolio-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .portfolio-item {
+        padding: 15px;
+    }
+
+    .portfolio-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-item p {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-item a {
+        font-size: 1rem;
+        padding: 8px 12px;
     }
 }
 
