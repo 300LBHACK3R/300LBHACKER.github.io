@@ -13,8 +13,8 @@
     --primary-color: #007BFF;
     --secondary-color: #ff6b6b;
     --highlight-color: #fbc531;
-    --card-bg: rgba(255, 255, 255, 0.95);
-    --card-bg-dark: rgba(30, 30, 30, 0.95);
+    --card-bg: white;
+    --card-bg-dark: #1f1f1f;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease-in-out;
 }
@@ -35,17 +35,16 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     transition: var(--transition);
-    padding-bottom: 50px;
 }
 
 /*--------------------------------------------------
-  🔵 NAVBAR - RESPONSIVE & CLEAN
+  🔵 NAVBAR (FULLY RESPONSIVE)
 --------------------------------------------------*/
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 20px;
     background: white;
     box-shadow: var(--box-shadow);
     position: sticky;
@@ -53,6 +52,7 @@ body {
     z-index: 1000;
 }
 
+/* Navbar Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -70,15 +70,15 @@ body {
     color: var(--primary-color);
 }
 
-/* Mobile Menu */
+/* Mobile Menu Button */
 .menu-toggle {
     display: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
 /*--------------------------------------------------
-  🏆 CERTIFICATIONS SECTION (CLEAN CARDS)
+  🏆 CERTIFICATIONS SECTION (CARDS FIXED FOR MOBILE)
 --------------------------------------------------*/
 #certs {
     margin-top: 40px;
@@ -86,11 +86,11 @@ body {
 }
 
 .certs-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
     justify-content: center;
+    padding: 20px;
 }
 
 .cert-card {
@@ -102,9 +102,10 @@ body {
     font-size: 1rem;
     font-weight: 600;
     transition: var(--transition);
-    position: relative;
+    width: 100%;
+    max-width: 350px;
     cursor: pointer;
-    overflow: hidden;
+    position: relative;
 }
 
 /* Hover Effect */
@@ -113,7 +114,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Expandable Text on Hover */
+/* Expandable Text */
 .cert-card::after {
     content: attr(data-full-text);
     position: absolute;
@@ -129,15 +130,16 @@ body {
     transition: var(--transition);
 }
 
+/* Show Text on Hover */
 .cert-card:hover::after {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Cert Card Images */
+/* Certification Images */
 .cert-card img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
     margin-top: 10px;
 }
@@ -155,9 +157,10 @@ footer {
 }
 
 /*--------------------------------------------------
-  📱 RESPONSIVE DESIGN (MOBILE FIXES)
+  📱 MOBILE FIXES (100% FIXED NOW)
 --------------------------------------------------*/
 @media screen and (max-width: 768px) {
+    /* Make navbar work properly */
     .menu-toggle {
         display: block;
     }
@@ -179,7 +182,8 @@ footer {
         display: flex;
     }
 
+    /* Adjust cert cards for mobile */
     .cert-card {
-        width: 100%;
+        max-width: 100%;
     }
 }
