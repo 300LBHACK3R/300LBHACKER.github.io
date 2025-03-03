@@ -8,20 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const yesBtn = document.getElementById("yesBtn");
     const noBtn = document.getElementById("noBtn");
 
-    // Only run this script if we're on index.html
+    // Ensure we are on index.html
     if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
-        // Check if the user has already seen the overlay
+        // Check if user has already entered before hiding
         if (!localStorage.getItem("ageVerified")) {
             overlay.classList.remove("hidden"); // Show overlay if not verified
         }
 
-        // "Enter" button hides the overlay
+        // Hide overlay on "ENTER" click
         yesBtn.addEventListener("click", () => {
             overlay.classList.add("hidden");
             localStorage.setItem("ageVerified", "true"); // Save their choice
         });
 
-        // "No" button gives an alert
+        // Handle "No" button
         noBtn.addEventListener("click", () => {
             alert("No worries—come back whenever you’re ready!");
         });
