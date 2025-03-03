@@ -95,6 +95,60 @@ body {
     color: var(--highlight-color);
 }
 
+/* -- 📌 FIX CERTIFICATIONS SECTION */
+#certs {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.certs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px;
+}
+
+.cert-card {
+    background: var(--glass-bg-light);
+    border-radius: 15px;
+    padding: 10px;
+    width: 280px;
+    height: auto;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px var(--primary-color);
+}
+
+.cert-card img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* -- 📌 FUN FACTS SECTION */
+#fun-facts {
+    margin: 30px auto;
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    background: var(--glass-bg-light);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px var(--primary-color);
+    border: 2px solid var(--highlight-color);
+}
+
 /* -- 📌 FIX RESPONSIVE NAVBAR MENU */
 @media screen and (max-width: 768px) {
     .menu-toggle {
@@ -125,5 +179,15 @@ body {
 
     .nav-links a {
         font-size: 1rem;
+    }
+
+    /* Adjust certifications */
+    .cert-card {
+        width: 100%;
+    }
+
+    /* Fun facts section */
+    #fun-facts {
+        width: 95%;
     }
 }
