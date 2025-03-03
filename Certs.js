@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
     const themeToggle = document.getElementById("theme-toggle");
-    const factElement = document.querySelector("#random-facts-list .fact-item");
-    const nextFactButton = document.getElementById("next-fact-button");
 
     // 🌟 Toggle Mobile Menu
     if (menuToggle && navLinks) {
@@ -28,29 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         themeToggle.addEventListener("click", () => {
             document.body.classList.toggle("dark-mode");
             themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
-        });
-    }
-
-    // 🔄 Fun Facts Array
-    const funFacts = [
-        "Did you know? The first computer virus was created in 1986!",
-        "Cybersecurity is expected to be a $300 billion industry by 2026!",
-        "The first website ever created is still online today!",
-        "Alan Turing is considered the father of modern computing!",
-        "Hackers attack every 39 seconds on average!",
-        "More than 5 billion devices are connected to the internet worldwide!"
-    ];
-
-    let currentFactIndex = 0;
-
-    if (factElement) {
-        factElement.textContent = funFacts[0];
-    }
-
-    if (nextFactButton) {
-        nextFactButton.addEventListener("click", () => {
-            factElement.textContent = funFacts[currentFactIndex];
-            currentFactIndex = (currentFactIndex + 1) % funFacts.length;
         });
     }
 });
