@@ -2,9 +2,9 @@
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 
-// -- SMOOTH SCROLL.
+// -- Smooth Scroll.
 /**
- * ENABLES SMOOTH SCROLLING INTERNALLY.
+ * Enables Smooth Scroll Internally. 
  */
 function enableSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -22,9 +22,9 @@ function enableSmoothScroll() {
     });
 }
 
-// -- VALIDATION FOR CONTACT FORM. 
+// -- Validattion For Contact Form. 
 /**
- * ENSURES ALL FIELDS ARE FILLED IN.
+ * Ensures All Fields Are Filled In.
  */
 function validateContactForm() {
     const form = document.querySelector("form");
@@ -44,9 +44,9 @@ function validateContactForm() {
     });
 }
 
-// -- RESUME DOWNLOAD/CONFETTI EFFECT.
+// -- Resume Download/Confetti.
 /**
- * HANDLES DOWNLOAD BUTTON WITH ANIMATION.
+ * Handles Download Button With Animation.
  */
 function handleResumeDownload() {
     const downloadButton = document.querySelector(".resume-download-btn");
@@ -55,13 +55,13 @@ function handleResumeDownload() {
     downloadButton.addEventListener("click", (event) => {
         event.preventDefault();
 
-        // -- LAUNCH CONFETTI.
+        // -- Launch Confetti.
         launchConfetti();
 
-        // -- SHOW ALERT MESSAGE.
+        // -- Show Alert Messsage.
         showAlert("📂 Your resume download will begin shortly!", "info");
 
-        // -- RESUME DOWNLOAD.
+        // -- Resume Download.
         setTimeout(() => {
             window.location.href = downloadButton.getAttribute("href");
         }, 1500);
@@ -69,7 +69,7 @@ function handleResumeDownload() {
 }
 
 /**
- * CREATES ADN LAUNCHES CONFETTI ANIMATION.
+ * Creates And Launches Confetti.
  */
 function launchConfetti() {
     const confettiContainer = document.createElement("div");
@@ -91,15 +91,15 @@ function launchConfetti() {
 }
 
 /**
- * GENERATES RANDOM COLOR FOR CONFETTI.
+ * Generates Random Colour For Confetti.
  */
 function randomColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-// -- STICKY HEADER EFFECT ON SCROLL. 
+// -- Sticky Header Effect on Scroll. 
 /**
- * ADDS A SHADOW EFFECT TO THE HEADER WHILE SCROLLING.
+ * Adds A Shadow To Header While Scrolling.
  */
 function stickyHeader() {
     const header = document.querySelector("header");
@@ -110,9 +110,9 @@ function stickyHeader() {
     });
 }
 
-// -- GLOBAL ALERT FUNCTION.
+// -- Global Alert Function.
 /**
- * Displays a user-friendly alert message.
+ * Displays A User Friendly Alert Message.
  */
 function showAlert(message, type) {
     const alertBox = document.createElement("div");
@@ -126,9 +126,9 @@ function showAlert(message, type) {
     }, 3000);
 }
 
-// -- INITIALIZE ALL FUNCTIONS WHEN DOCUMENT IS READY.
+// -- Init All Functions Ater Doc Is Ready.
 /**
- * INITIALIZES WEBSITE FUNCTIONALITY. 
+ * Initiliazes Website Funcationality. 
  */
 function initializeWebsite() {
     enableSmoothScroll();
@@ -137,11 +137,11 @@ function initializeWebsite() {
     stickyHeader();
 }
 
-// -- CALLS INITIALIZATION, WHEN PAGE IS LOADED.
+// -- Calls Initialize When Pagwe Is Loaded. 
 document.addEventListener("DOMContentLoaded", initializeWebsite);
 
  <script>
-        // Toggle Mobile Navigation
+        // -- Toggle Mobile Navigation.
         document.querySelector(".menu-toggle").addEventListener("click", function () {
             document.querySelector(".nav-links").classList.toggle("active");
         });
