@@ -2,75 +2,145 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 
-<!DOCTYPE html>
-<html lang="en">
+/* GLOBAL STYLES */
+:root {
+    --background: #f9f9f9;
+    --background-dark: #121212;
+    --text-color: #222;
+    --text-color-dark: #e0e0e0;
+    --primary-color: #007BFF;
+    --card-bg: white;
+    --card-bg-dark: #1f1f1f;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease-in-out;
+}
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Achievements & Certifications</title>
+body {
+    background: var(--background);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    transition: var(--transition);
+}
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="Certs.css">
-</head>
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-<body>
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">🚀 Tate Byers</div>
-        <button class="menu-toggle">☰</button>
-        <ul class="nav-links">
-            <li><a href="index.html">🏠 Home</a></li>
-            <li><a href="FunFacts.html">🎈 Fun Facts</a></li>
-            <li><a href="Projects.html">💡 Projects</a></li>
-            <li><a href="WebsiteBuilds.html">💡 Website Builds 💡</a></li>
-            <li><a href="Testimonials.html">💬 Testimonials</a></li>
-            <li><a href="Resume.html">💼 Resume</a></li>
-            <li><a href="AboutMe.html">❓ About Tate</a></li>
-        </ul>
-        <button id="theme-toggle">🌙 Dark Mode</button>
-    </nav>
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
 
-    <section id="certs">
-        <div class="fancy-box">
-            <h2>🏆 Achievements & Certifications 🏆</h2>
-        </div>
-        <div class="certs-container">
-            <div class="cert-card"
-                data-full-text="Anticipated October 2025 graduation with a Diploma in Network Administration and Security. (4.0 GPA)">
-                🎓 Anticipated Oct 2025 graduation...
-            </div>
-            <div class="cert-card"
-                data-full-text="I have developed ethical hacking frameworks, Programs & Software using Python & shell.">
-                🛡️ Developed ethical hacking frameworks...
-            </div>
-            <div class="cert-card"
-                data-full-text="Implemented OWASP Top 10 mitigation strategies to secure web applications.">
-                🔐 Implemented OWASP Top 10 strategies...
-            </div>
-            <div class="cert-card">
-                <img src="Photo2.png" alt="AWS CLOUD FOUNDATIONS CERT"> 
-                ☁️ AWS Cloud Foundations...
-            </div>
-            <div class="cert-card">
-                <img src="Photo.png" alt="JR PENETRATION TESTER">
-                🕵️‍♂️ JR PENETRATION TESTER...
-            </div>
-        </div>
-    </section>
+.nav-links a:hover {
+    color: var(--primary-color);
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>©2025 Tate Byers #300LBHACKER# *Reflecting Creativity & Capabilities*</p>
-    </footer>
+/* NAVBAR MOBILE FIX */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
-    <script src="Certs.js" defer></script>
+/* ✅ FIXED CERTIFICATION CARDS FOR PC & MOBILE */
+#certs {
+    margin-top: 40px;
+    padding: 20px;
+}
 
-</body>
+/* 📌 **Fixing Grid Layout** */
+.certs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
 
-</html>
+.cert-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✅ FIXED IMAGE ALIGNMENT */
+.cert-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* ✅ HOVER EFFECTS */
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌍 RESPONSIVE FIXES */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 15px 0;
+        box-shadow: var(--box-shadow);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* ✅ MOBILE CERT CARDS FIX */
+    .certs-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .cert-card {
+        max-width: 100%;
+    }
+}
+
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
