@@ -23,6 +23,12 @@ body {
     transition: var(--transition);
 }
 
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+
 /* NAVBAR */
 .navbar {
     display: flex;
