@@ -2,9 +2,7 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 
-/*--------------------------------------------------
-  🎨 COLOR PALETTE & GLOBAL STYLES
---------------------------------------------------*/
+/* Global Styles */
 :root {
     --background: #f9f9f9;
     --background-dark: #121212;
@@ -25,10 +23,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background: var(--background);
     color: var(--text-color);
@@ -37,9 +31,7 @@ body {
     transition: var(--transition);
 }
 
-/*--------------------------------------------------
-  🔵 NAVBAR (FULLY RESPONSIVE)
---------------------------------------------------*/
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -49,10 +41,10 @@ body {
     box-shadow: var(--box-shadow);
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
-/* Navbar Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -70,26 +62,23 @@ body {
     color: var(--primary-color);
 }
 
-/* Mobile Menu Button */
+/* Mobile Menu */
 .menu-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
 }
 
-/*--------------------------------------------------
-  🏆 CERTIFICATIONS SECTION (CARDS FIXED FOR MOBILE)
---------------------------------------------------*/
+/* Certifications Section */
 #certs {
     margin-top: 40px;
     padding: 20px;
 }
 
 .certs-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: center;
     padding: 20px;
 }
 
@@ -102,65 +91,17 @@ body {
     font-size: 1rem;
     font-weight: 600;
     transition: var(--transition);
-    width: 100%;
-    max-width: 350px;
     cursor: pointer;
     position: relative;
 }
 
-/* Hover Effect */
 .cert-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Expandable Text */
-.cert-card::after {
-    content: attr(data-full-text);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-size: 0.9rem;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: var(--transition);
-}
-
-/* Show Text on Hover */
-.cert-card:hover::after {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Certification Images */
-.cert-card img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-/*--------------------------------------------------
-  📌 FOOTER
---------------------------------------------------*/
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: white;
-    box-shadow: var(--box-shadow);
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
-
-/*--------------------------------------------------
-  📱 MOBILE FIXES (100% FIXED NOW)
---------------------------------------------------*/
+/* Responsive Fixes */
 @media screen and (max-width: 768px) {
-    /* Make navbar work properly */
     .menu-toggle {
         display: block;
     }
@@ -168,9 +109,9 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
+        position: absolute;
         width: 100%;
         background: white;
-        position: absolute;
         top: 60px;
         left: 0;
         text-align: center;
@@ -180,10 +121,5 @@ footer {
 
     .nav-links.active {
         display: flex;
-    }
-
-    /* Adjust cert cards for mobile */
-    .cert-card {
-        max-width: 100%;
     }
 }
