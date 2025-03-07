@@ -38,6 +38,17 @@ if (localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark-mode");
 }
 
+    document.getElementById("cert-filter").addEventListener("change", function () {
+    let category = this.value;
+    document.querySelectorAll(".cert-card").forEach(card => {
+        if (category === "all" || card.dataset.category === category) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
     
 });
 
