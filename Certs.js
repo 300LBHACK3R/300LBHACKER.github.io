@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelector(".nav-links");
     const themeToggle = document.getElementById("theme-toggle");
 
-    // 🌟 Toggle Mobile Menu
+    // Toggle Mobile Menu
     if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", () => {
             navLinks.classList.toggle("active");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 🎨 Dark Mode Toggle
+    // Dark Mode Toggle
     if (themeToggle) {
         themeToggle.addEventListener("click", () => {
             document.body.classList.toggle("dark-mode");
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
