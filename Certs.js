@@ -49,9 +49,6 @@ if (localStorage.getItem("darkMode") === "true") {
     });
 });
 
-    
-});
-
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
