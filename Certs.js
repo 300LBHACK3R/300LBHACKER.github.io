@@ -27,6 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
             themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
         });
     }
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+});
+
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark-mode");
+}
+
+    
 });
 
 //----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
