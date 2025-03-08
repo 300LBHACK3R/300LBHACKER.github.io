@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    /* Interactive Navbar Glow Effect */
+    /* Navbar Background Change on Scroll */
     const navbar = document.querySelector('.navbar');
     window.addEventListener("scroll", () => {
-        navbar.style.background = window.scrollY > 50 ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.1)";
+        navbar.style.background = window.scrollY > 50 ? "rgba(0, 0, 0, 0.9)" : "rgba(13, 17, 23, 0.9)";
     });
 
-    /* Fun Interactive Hero Text Change */
+    /* Dynamic Hero Text */
     const heroText = document.querySelector(".hero-text-container");
     const messages = [
         "🔥 Pushing the limits of technology...",
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         index = (index + 1) % messages.length;
     }, 3000);
 
-    /* Fade-in Effect Trigger */
+    /* Fade-in Effect */
     const elements = document.querySelectorAll(".fade-in");
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -41,17 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { threshold: 0.2 });
 
     elements.forEach(el => observer.observe(el));
-
-    /* Theme Toggle Button */
-    const toggleButton = document.createElement("button");
-    toggleButton.innerText = "🌙 Toggle Theme";
-    toggleButton.classList.add("theme-toggle");
-    document.body.appendChild(toggleButton);
-
-    toggleButton.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-        toggleButton.innerText = document.body.classList.contains("light-mode") ? "☀️ Dark Mode" : "🌙 Light Mode";
-    });
 
     /* Mobile Navbar Toggle */
     const menuToggle = document.createElement("div");
