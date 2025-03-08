@@ -1,32 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-  /******************************************************
-   * MOBILE MENU TOGGLE
-   ******************************************************/
+  // Mobile Menu Toggle
   window.toggleMenu = function() {
+    console.log("Toggle called");
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
   };
 
-  /******************************************************
-   * SMOOTH SCROLL
-   ******************************************************/
-  window.scrollToSection = function(id) {
-    const section = document.getElementById(id);
-    section.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  /******************************************************
-   * STAR BACKGROUND ANIMATION
-   ******************************************************/
+  // Starry Background Animation
   const starCanvas = document.getElementById("stars-canvas");
   const starCtx = starCanvas.getContext("2d");
 
-  function resizeCanvas() {
+  function resizeStarCanvas() {
     starCanvas.width = window.innerWidth;
     starCanvas.height = window.innerHeight;
   }
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
+  window.addEventListener("resize", resizeStarCanvas);
+  resizeStarCanvas();
 
   const stars = [];
   const numStars = 200;
@@ -56,40 +45,19 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   animateStars();
 
-  /******************************************************
-   * SPACE INVADERS GAME
-   ******************************************************/
+  // Space Invaders Game
   const gameCanvas = document.getElementById("game-canvas");
   const ctx = gameCanvas.getContext("2d");
-
   const W = gameCanvas.width;
   const H = gameCanvas.height;
-
-  // Player
-  const player = {
-    x: W / 2 - 15,
-    y: H - 30,
-    w: 30,
-    h: 15,
-    speed: 5
-  };
-  let rightPressed = false;
-  let leftPressed = false;
-
-  // Bullets
+  const player = { x: W / 2 - 15, y: H - 30, w: 30, h: 15, speed: 5 };
+  let rightPressed = false, leftPressed = false;
   const bullets = [];
   const bulletSpeed = 6;
-
-  // Invaders
   const invaders = [];
-  const rows = 3;
-  const cols = 6;
-  const invW = 30;
-  const invH = 20;
-  const padding = 10;
+  const rows = 3, cols = 6;
+  const invW = 30, invH = 20, padding = 10;
   let direction = 1;
-
-  // Build invaders
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       const x = 30 + c * (invW + padding);
@@ -99,97 +67,67 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Key handlers for desktop
-  document.addEventListener("keydown", e => {
+  document.addEventListener("keydown", function(e) {
     if (e.key === "ArrowRight") rightPressed = true;
     if (e.key === "ArrowLeft") leftPressed = true;
     if (e.key === " " || e.key === "Spacebar") shoot();
   });
-  document.addEventListener("keyup", e => {
+  document.addEventListener("keyup", function(e) {
     if (e.key === "ArrowRight") rightPressed = false;
     if (e.key === "ArrowLeft") leftPressed = false;
   });
 
-  // Touch + click controls for mobile
+  // Touch controls for mobile
   const btnLeft = document.getElementById("btn-left");
   const btnRight = document.getElementById("btn-right");
   const btnShoot = document.getElementById("btn-shoot");
 
-  // If the user taps or clicks the left button
-  btnLeft.addEventListener("touchstart", e => {
-    e.preventDefault();
-    leftPressed = true;
-  });
-  btnLeft.addEventListener("touchend", e => {
-    e.preventDefault();
-    leftPressed = false;
-  });
-  btnLeft.addEventListener("mousedown", () => { leftPressed = true; });
-  btnLeft.addEventListener("mouseup", () => { leftPressed = false; });
+  if (btnLeft) {
+    btnLeft.addEventListener("touchstart", function(e) { e.preventDefault(); leftPressed = true; });
+    btnLeft.addEventListener("touchend", function(e) { e.preventDefault(); leftPressed = false; });
+    btnLeft.addEventListener("mousedown", function() { leftPressed = true; });
+    btnLeft.addEventListener("mouseup", function() { leftPressed = false; });
+  }
+  if (btnRight) {
+    btnRight.addEventListener("touchstart", function(e) { e.preventDefault(); rightPressed = true; });
+    btnRight.addEventListener("touchend", function(e) { e.preventDefault(); rightPressed = false; });
+    btnRight.addEventListener("mousedown", function() { rightPressed = true; });
+    btnRight.addEventListener("mouseup", function() { rightPressed = false; });
+  }
+  if (btnShoot) {
+    btnShoot.addEventListener("touchstart", function(e) { e.preventDefault(); shoot(); });
+    btnShoot.addEventListener("mousedown", shoot);
+  }
 
-  // If the user taps or clicks the right button
-  btnRight.addEventListener("touchstart", e => {
-    e.preventDefault();
-    rightPressed = true;
-  });
-  btnRight.addEventListener("touchend", e => {
-    e.preventDefault();
-    rightPressed = false;
-  });
-  btnRight.addEventListener("mousedown", () => { rightPressed = true; });
-  btnRight.addEventListener("mouseup", () => { rightPressed = false; });
-
-  // If the user taps or clicks the shoot button
-  btnShoot.addEventListener("touchstart", e => {
-    e.preventDefault();
-    shoot();
-  });
-  btnShoot.addEventListener("mousedown", shoot);
-
-  // Helper function to fire a bullet
   function shoot() {
     bullets.push({ x: player.x + player.w / 2 - 2, y: player.y, w: 4, h: 10 });
   }
 
-  // Update game logic
   function updateGame() {
-    // Move player
     if (rightPressed && player.x + player.w < W) player.x += player.speed;
     if (leftPressed && player.x > 0) player.x -= player.speed;
-
-    // Update bullets
-    bullets.forEach((b, i) => {
-      b.y -= bulletSpeed;
-      // Remove off-screen
-      if (b.y + b.h < 0) {
-        bullets.splice(i, 1);
-      }
-    });
-
-    // Move invaders
+    for (let i = 0; i < bullets.length; i++) {
+      bullets[i].y -= bulletSpeed;
+      if (bullets[i].y + bullets[i].h < 0) { bullets.splice(i, 1); i--; }
+    }
     let reverse = false;
-    invaders.forEach(inv => {
+    invaders.forEach(function(inv) {
       if (inv.alive) {
         inv.x += direction;
-        if (inv.x + inv.w > W || inv.x < 0) {
-          reverse = true;
-        }
+        if (inv.x + inv.w > W || inv.x < 0) reverse = true;
       }
     });
     if (reverse) {
       direction *= -1;
-      invaders.forEach(inv => {
-        inv.y += 10;
-      });
+      invaders.forEach(function(inv) { inv.y += 10; });
     }
-
-    // Check collisions (bullets vs invaders)
-    bullets.forEach((b, bi) => {
-      invaders.forEach(inv => {
+    bullets.forEach(function(bullet, bi) {
+      invaders.forEach(function(inv) {
         if (inv.alive &&
-            b.x < inv.x + inv.w &&
-            b.x + b.w > inv.x &&
-            b.y < inv.y + inv.h &&
-            b.y + b.h > inv.y) {
+            bullet.x < inv.x + inv.w &&
+            bullet.x + bullet.w > inv.x &&
+            bullet.y < inv.y + inv.h &&
+            bullet.y + bullet.h > inv.y) {
           inv.alive = false;
           bullets.splice(bi, 1);
         }
@@ -197,30 +135,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Render game
   function drawGame() {
     ctx.clearRect(0, 0, W, H);
-
-    // Player
     ctx.fillStyle = "#ff6f61";
     ctx.fillRect(player.x, player.y, player.w, player.h);
-
-    // Bullets
     ctx.fillStyle = "#fff";
-    bullets.forEach(b => {
-      ctx.fillRect(b.x, b.y, b.w, b.h);
+    bullets.forEach(function(bullet) {
+      ctx.fillRect(bullet.x, bullet.y, bullet.w, bullet.h);
     });
-
-    // Invaders
     ctx.fillStyle = "#fff";
-    invaders.forEach(inv => {
+    invaders.forEach(function(inv) {
       if (inv.alive) {
         ctx.fillRect(inv.x, inv.y, inv.w, inv.h);
       }
     });
   }
 
-  // Game loop
   function gameLoop() {
     updateGame();
     drawGame();
