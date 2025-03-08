@@ -1,7 +1,7 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/* General Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,26 +11,19 @@
 }
 
 body {
-    background: linear-gradient(270deg, #0f172a, #1e293b, #00d9ff, #ff007f);
-    background-size: 400% 400%;
-    animation: backgroundAnimation 10s ease infinite;
-    color: white;
+    background: #0d1117;
+    color: #e6edf3;
     text-align: center;
     padding: 20px;
     transition: background 0.3s ease-in-out;
 }
 
-/* Background Animation */
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Navbar */
+/* Navbar Styles */
 .navbar {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(13, 17, 23, 0.9);
     padding: 15px 0;
     position: fixed;
     width: 100%;
@@ -42,8 +35,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-links li {
@@ -51,26 +43,92 @@ body {
 }
 
 .nav-links a {
-    color: #00d9ff;
+    color: #00b4d8;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
     transition: 0.3s ease-in-out;
+    padding: 8px 12px;
 }
 
 .nav-links a:hover {
     color: #ff007f;
-    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
 
-/* Mobile Menu */
+/* Hero Section */
+#hero {
+    position: relative;
+    background: url('https://source.unsplash.com/1600x900/?technology,hacker') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.hero-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #00b4d8;
+}
+
+/* About Section */
+#About-Me {
+    margin-top: 50px;
+    padding: 40px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+#About-Me h2 {
+    font-size: 2.5em;
+    color: #00b4d8;
+    border-bottom: 3px solid #ff007f;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#About-Me p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: left;
+    padding: 0 15px;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(13, 17, 23, 0.9);
+    font-size: 14px;
+}
+
+/* Mobile Navbar */
 .menu-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -91,85 +149,13 @@ body {
 
     .menu-toggle {
         display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: white;
     }
 }
 
-/* About Section */
-#About-Me {
-    margin-top: 80px;
-    padding: 50px;
-    text-align: left;
-    max-width: 900px;
-    margin: auto;
-}
-
-#About-Me h2 {
-    font-size: 2.5em;
-    color: #00d9ff;
-    border-bottom: 3px solid #ff007f;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-#About-Me p {
-    font-size: 1.2em;
-    line-height: 1.8;
-}
-
-/* Hero Section */
-#hero {
-    background: url('https://source.unsplash.com/1600x900/?technology,hacker') no-repeat center center/cover;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-}
-
-.hero-text-container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.hero-text {
-    font-size: 1.5em;
-    color: #00d9ff;
-}
-
-/* Fade-in Effect */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Light Mode */
-.light-mode {
-    background: white;
-    color: black;
-}
-
-.light-mode .navbar {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 10px;
-    background: #ff007f;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
