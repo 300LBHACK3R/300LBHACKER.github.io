@@ -198,65 +198,6 @@ footer {
   color: #999;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-/* Basic Navbar Styles */
-.navbar {
-  background: #333;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  position: relative;
-}
-.logo {
-  font-size: 1.2rem;
-  color: #fff;
-  font-weight: bold;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-.nav-links li a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-.nav-links li a:hover {
-  color: #ff6f61;
-}
-
-/* Hamburger Menu (hidden on desktop) */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.3rem;  /* Extra tap area */
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #444;
-    position: absolute;
-    top: 50px;    /* Adjust based on your header height */
-    right: 0;
-    width: 180px;
-    padding: 1rem;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
-
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
