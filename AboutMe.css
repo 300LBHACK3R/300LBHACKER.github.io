@@ -66,6 +66,7 @@ body {
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
+  padding: 0.5rem; /* Increased clickable area */
 }
 
 /* HERO SECTION */
