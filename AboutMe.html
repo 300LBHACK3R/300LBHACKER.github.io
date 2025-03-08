@@ -4,87 +4,68 @@
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
   
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Security Meta Tags -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <title>About Me - Tate Byers</title>
-  <!-- External CSS -->
-  <link rel="stylesheet" href="AboutMe.css">
+  <title>About Me - Tate's Playground</title>
+  <link rel="stylesheet" href="space.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Starry Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+  
+  <!-- Navigation Bar -->
   <header>
-    <div class="navbar">
-      <div class="logo">Tate Byers</div>
+    <nav class="navbar">
+      <div class="logo">Tate's Playground</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#cards">Skills</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <!-- Mobile menu toggle -->
       <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-    </div>
+    </nav>
   </header>
   
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h1>Welcome to My World</h1>
-      <p>I am Tate Byers—network IT & security professional, ethical hacker, and creative technologist. I break barriers with code and passion.</p>
-      <button onclick="scrollToSection('about')">Discover More</button>
-    </div>
-  </section>
-  
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I specialize in crafting secure, innovative solutions that bridge technology and creativity. With extensive experience in network security, programming, and ethical hacking, I turn challenges into opportunities.
-    </p>
-    <p>
-      Beyond the digital realm, I express my creativity through music and art, always striving to blend technical expertise with aesthetic excellence. Let’s build a connected future together!
-    </p>
-  </section>
-  
-  <!-- Skills & Interactive Cards Section -->
-  <section id="cards">
-    <h2>My Skills & Talents</h2>
-    <div class="cards-container">
-      <div class="card">
-        <h3>Networking</h3>
-        <p>Designing and implementing secure, robust networks that keep data flowing safely.</p>
-      </div>
-      <div class="card">
-        <h3>Ethical Hacking</h3>
-        <p>Uncovering vulnerabilities and fortifying systems with cutting-edge security measures.</p>
-      </div>
-      <div class="card">
-        <h3>Full Stack Development</h3>
-        <p>Building scalable, interactive web applications that bring ideas to life.</p>
-      </div>
-      <div class="card">
-        <h3>Creative Design</h3>
-        <p>Combining art and technology to create visually stunning digital experiences.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Welcome to My Universe</h1>
+      <p>Explore my journey in tech, security, and creativity as I traverse the cosmos of innovation.</p>
+      <button onclick="scrollToSection('game-section')">Play Space Invaders</button>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am Tate Byers—a Network IT & Security professional with a passion for solving complex problems through innovative technology. When I'm not coding or securing networks, you'll find me exploring the cosmos of creativity and music. Welcome to my cosmic playground!
+      </p>
+    </section>
+    
+    <!-- Game Section -->
+    <section id="game-section">
+      <h2>Space Invaders Game</h2>
+      <canvas id="game-canvas" width="400" height="300"></canvas>
+      <p>Use the left/right arrow keys to move and space to shoot!</p>
+    </section>
+  </main>
   
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Tate Byers #300LBHACKER# - Crafted with passion and innovation.</p>
+    <p>&copy; 2025 Tate Byers #300LBHACKER# - Powered by the cosmos.</p>
   </footer>
   
-  <!-- External JS -->
-  <script src="AboutMe.js"></script>
+  <script src="space.js"></script>
 </body>
 </html>
+
 
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
