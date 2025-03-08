@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Mobile Menu Toggle
   window.toggleMenu = function() {
-    console.log("Toggle function called");
+    console.log("Toggle function called"); // Check in the console
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
   };
@@ -149,3 +149,4 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   gameLoop();
 });
+
