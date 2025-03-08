@@ -4,18 +4,22 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://threejs.org; img-src 'self' data:;">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Form</title>
-  <link rel="stylesheet" href="Contact.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:">
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <link rel="stylesheet" href="FunFacts.css" />
+    <title>Contact📱</title>
+  </head>
 <body>
-  <!-- Starry Background Canvas will be appended here -->
   
   <header>
     <nav class="navbar">
+      <div class="logo">Contact📱</div>
+      <div class="menu-toggle">&#9776;</div>
       <ul class="nav-links">
         <li><a href="index.html">🏠 Home</a></li>
         <li><a href="Certs.html">🏆 Achievements/Certs</a></li>
@@ -67,57 +71,6 @@
   </script>
 
   <script src="funfact.js"></script>
-
-  <!-- Load Three.js for the starry background -->
-  <script src="https://threejs.org/build/three.min.js"></script>
-  <script>
-    // Set up the Three.js scene, camera, and renderer for the starry background
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 2000);
-    camera.position.z = 1;
-
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    // Position the canvas behind other elements
-    renderer.domElement.style.position = "fixed";
-    renderer.domElement.style.top = "0";
-    renderer.domElement.style.left = "0";
-    renderer.domElement.style.zIndex = "-1";
-    document.body.appendChild(renderer.domElement);
-
-    // Create a star field using BufferGeometry for optimal performance
-    const starCount = 10000;
-    const starsGeometry = new THREE.BufferGeometry();
-    const positions = new Float32Array(starCount * 3);
-
-    for (let i = 0; i < starCount; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 1000;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 1000;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 1000;
-    }
-    starsGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
-    // Points material defines the look of the stars
-    const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff });
-    const starField = new THREE.Points(starsGeometry, starsMaterial);
-    scene.add(starField);
-
-    // Animation loop to create the drifting effect
-    function animate() {
-      requestAnimationFrame(animate);
-      starField.rotation.x += 0.0005;
-      starField.rotation.y += 0.001;
-      renderer.render(scene, camera);
-    }
-    animate();
-
-    // Update the canvas size when the window is resized
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-  </script>
 
   <footer>
     <p>©2025 Tate Byers #300LBHACKER# *The way the themes differ on each page reflects my Creativity & Capabilities*</p>
