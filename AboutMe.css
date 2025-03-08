@@ -105,9 +105,10 @@ body {
 /* ABOUT SECTION */
 #about-section {
   padding: 3rem 1rem;
-  margin-top: 5rem;
+  margin-top: 5rem; 
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 #about-section h2 {
