@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/*--- Reset & Global Styles. ---*/
+/* RESET & GLOBAL STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/*--- Star Canvas. ---*/
+/* STAR CANVAS */
 #stars-canvas {
   position: fixed;
   top: 0;
@@ -29,7 +29,7 @@ body {
   background: #000;
 }
 
-/*--- Navbar. ---*/
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -71,7 +71,7 @@ body {
   padding: 0.5rem;
 }
 
-/*--- Mobile Navagation. ---*/
+/* MOBILE NAV */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -91,14 +91,15 @@ body {
   }
 }
 
-/*--- My Main Content Offset. ---*/
+/* MAIN CONTENT OFFSET */
 main {
   padding-top: 70px;
 }
 
-/*--- My Hero Section. ---*/
+/* HERO SECTION */
 #hero {
-  height: 100vh;
+  /* Instead of a fixed 100vh, let the content dictate height. */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,7 +130,7 @@ main {
   background: #ff9472;
 }
 
-/*--- My About Section. ---*/
+/* ABOUT SECTION */
 #about-section {
   padding: 3rem 1rem;
   max-width: 800px;
@@ -147,7 +148,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/*--- My Game Section. ---*/
+/* GAME SECTION */
 #game-section {
   padding: 3rem 1rem;
   text-align: center;
@@ -171,7 +172,7 @@ main {
   font-size: 1rem;
 }
 
-/*--- Touch Controls. ---*/
+/* TOUCH CONTROLS */
 .touch-controls {
   display: flex;
   justify-content: center;
@@ -191,13 +192,31 @@ main {
   background: #ff9472;
 }
 
-/*--- Footer. ---*/
+/* FOOTER */
 footer {
   text-align: center;
   padding: 1rem;
   background: #111;
   font-size: 0.9rem;
   color: #999;
+}
+
+/* 
+  RESPONSIVE TWEAKS FOR SMALL SCREENS 
+  - Adjust hero text sizes
+  - Make sure nothing gets cut off
+*/
+@media (max-width: 768px) {
+  #hero {
+    padding: 4rem 1rem;   /* More padding for smaller screens */
+    min-height: auto;     /* Let content define height */
+  }
+  .hero-text h1 {
+    font-size: 2rem;      /* Scale down big text */
+  }
+  .hero-text p {
+    font-size: 1rem;      /* Smaller paragraph text */
+  }
 }
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
