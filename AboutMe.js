@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Mobile Menu Toggle
   window.toggleMenu = function() {
-    console.log("Toggle called");
+    console.log("Toggle function called");
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
   };
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
   // Starry Background Animation
   const starCanvas = document.getElementById("stars-canvas");
   const starCtx = starCanvas.getContext("2d");
-
   function resizeStarCanvas() {
     starCanvas.width = window.innerWidth;
     starCanvas.height = window.innerHeight;
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
       speed: Math.random() * 0.5 + 0.2
     });
   }
-
   function animateStars() {
     starCtx.clearRect(0, 0, starCanvas.width, starCanvas.height);
     starCtx.fillStyle = "#fff";
@@ -65,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
       invaders.push({ x, y, w: invW, h: invH, alive: true });
     }
   }
-
   // Key handlers for desktop
   document.addEventListener("keydown", function(e) {
     if (e.key === "ArrowRight") rightPressed = true;
@@ -76,12 +73,10 @@ document.addEventListener("DOMContentLoaded", function() {
     if (e.key === "ArrowRight") rightPressed = false;
     if (e.key === "ArrowLeft") leftPressed = false;
   });
-
   // Touch controls for mobile
   const btnLeft = document.getElementById("btn-left");
   const btnRight = document.getElementById("btn-right");
   const btnShoot = document.getElementById("btn-shoot");
-
   if (btnLeft) {
     btnLeft.addEventListener("touchstart", function(e) { e.preventDefault(); leftPressed = true; });
     btnLeft.addEventListener("touchend", function(e) { e.preventDefault(); leftPressed = false; });
@@ -98,11 +93,9 @@ document.addEventListener("DOMContentLoaded", function() {
     btnShoot.addEventListener("touchstart", function(e) { e.preventDefault(); shoot(); });
     btnShoot.addEventListener("mousedown", shoot);
   }
-
   function shoot() {
     bullets.push({ x: player.x + player.w / 2 - 2, y: player.y, w: 4, h: 10 });
   }
-
   function updateGame() {
     if (rightPressed && player.x + player.w < W) player.x += player.speed;
     if (leftPressed && player.x > 0) player.x -= player.speed;
@@ -134,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   }
-
   function drawGame() {
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = "#ff6f61";
@@ -150,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
-
   function gameLoop() {
     updateGame();
     drawGame();
