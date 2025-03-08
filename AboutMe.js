@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Mobile Menu Toggle
-  window.toggleMenu = function() {
+  // 1) Hook up the mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  menuToggle.addEventListener('click', function() {
     console.log("Toggle function called");
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
-  };
-
+  });
+  
   // Starry Background Animation
   const starCanvas = document.getElementById("stars-canvas");
   const starCtx = starCanvas.getContext("2d");
