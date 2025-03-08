@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
   //---- Set Toggle Button Text Based On The Current Mode.
   if (themeToggle) {
-    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 The DARK SIDE";
   
     //---- Toggle Dark Mode On Click.
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
       localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-      themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+      themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 The DARK SIDE";
     });
   } else {
     console.warn('No element with id "theme-toggle" found.');
