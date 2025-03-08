@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Key handlers
+  // Key handlers for desktop
   document.addEventListener("keydown", e => {
     if (e.key === "ArrowRight") rightPressed = true;
     if (e.key === "ArrowLeft") leftPressed = true;
@@ -109,10 +109,48 @@ document.addEventListener("DOMContentLoaded", function() {
     if (e.key === "ArrowLeft") leftPressed = false;
   });
 
+  // Touch + click controls for mobile
+  const btnLeft = document.getElementById("btn-left");
+  const btnRight = document.getElementById("btn-right");
+  const btnShoot = document.getElementById("btn-shoot");
+
+  // If the user taps or clicks the left button
+  btnLeft.addEventListener("touchstart", e => {
+    e.preventDefault();
+    leftPressed = true;
+  });
+  btnLeft.addEventListener("touchend", e => {
+    e.preventDefault();
+    leftPressed = false;
+  });
+  btnLeft.addEventListener("mousedown", () => { leftPressed = true; });
+  btnLeft.addEventListener("mouseup", () => { leftPressed = false; });
+
+  // If the user taps or clicks the right button
+  btnRight.addEventListener("touchstart", e => {
+    e.preventDefault();
+    rightPressed = true;
+  });
+  btnRight.addEventListener("touchend", e => {
+    e.preventDefault();
+    rightPressed = false;
+  });
+  btnRight.addEventListener("mousedown", () => { rightPressed = true; });
+  btnRight.addEventListener("mouseup", () => { rightPressed = false; });
+
+  // If the user taps or clicks the shoot button
+  btnShoot.addEventListener("touchstart", e => {
+    e.preventDefault();
+    shoot();
+  });
+  btnShoot.addEventListener("mousedown", shoot);
+
+  // Helper function to fire a bullet
   function shoot() {
     bullets.push({ x: player.x + player.w / 2 - 2, y: player.y, w: 4, h: 10 });
   }
 
+  // Update game logic
   function updateGame() {
     // Move player
     if (rightPressed && player.x + player.w < W) player.x += player.speed;
@@ -159,16 +197,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  // Render game
   function drawGame() {
     ctx.clearRect(0, 0, W, H);
+
     // Player
     ctx.fillStyle = "#ff6f61";
     ctx.fillRect(player.x, player.y, player.w, player.h);
+
     // Bullets
     ctx.fillStyle = "#fff";
     bullets.forEach(b => {
       ctx.fillRect(b.x, b.y, b.w, b.h);
     });
+
     // Invaders
     ctx.fillStyle = "#fff";
     invaders.forEach(inv => {
@@ -178,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  // Game loop
   function gameLoop() {
     updateGame();
     drawGame();
