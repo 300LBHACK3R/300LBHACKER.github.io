@@ -23,14 +23,22 @@ body {
     transition: var(--transition);
 }
 
+/* DARK MODE STYLES */
 .dark-mode {
-  background-color: #121212;
-  color: #121212; 
-  margin: 0 auto; 
-  max-width: 1200px; 
+  background-color: var(--background-dark);
+  color: var(--text-color-dark);
 }
 
-
+/* Optional: Dark mode tweaks for specific elements */
+.dark-mode .navbar {
+    background: var(--card-bg-dark);
+}
+.dark-mode .nav-links a {
+    color: var(--text-color-dark);
+}
+.dark-mode .cert-card {
+    background: var(--card-bg-dark);
+}
 
 /* NAVBAR */
 .navbar {
@@ -63,20 +71,19 @@ body {
     color: var(--primary-color);
 }
 
-/* NAVBAR MOBILE FIX */
 .menu-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
 }
 
-/* ✅ FIXED CERTIFICATION CARDS FOR PC & MOBILE */
+/* CERTS SECTION */
 #certs {
     margin-top: 40px;
     padding: 20px;
 }
 
-/* 📌 **Fixing Grid Layout** */
+/* GRID LAYOUT */
 .certs-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -103,7 +110,7 @@ body {
     align-items: center;
 }
 
-/* ✅ FIXED IMAGE ALIGNMENT */
+/* IMAGE ALIGNMENT */
 .cert-card img {
     width: 100%;
     max-width: 200px;
@@ -111,13 +118,13 @@ body {
     margin-bottom: 10px;
 }
 
-/* ✅ HOVER EFFECTS */
+/* HOVER EFFECTS */
 .cert-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* 🌍 RESPONSIVE FIXES */
+/* RESPONSIVE STYLES */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -140,7 +147,6 @@ body {
         display: flex;
     }
 
-    /* ✅ MOBILE CERT CARDS FIX */
     .certs-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -149,6 +155,7 @@ body {
         max-width: 100%;
     }
 }
+
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
