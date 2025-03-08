@@ -1,5 +1,9 @@
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+
 document.addEventListener("DOMContentLoaded", function() {
-  // 1) Hook up the mobile menu toggle
+  //--- Mobile Menu Toggle. ---//
   const menuToggle = document.querySelector('.menu-toggle');
   menuToggle.addEventListener('click', function() {
     console.log("Toggle function called");
@@ -7,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     navLinks.classList.toggle('active');
   });
   
-  // Starry Background Animation
+  //--- Star Background Animation. ---//
   const starCanvas = document.getElementById("stars-canvas");
   const starCtx = starCanvas.getContext("2d");
   function resizeStarCanvas() {
@@ -44,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   animateStars();
 
-  // Space Invaders Game
+  //--- My Space Invaders Game. ---//
   const gameCanvas = document.getElementById("game-canvas");
   const ctx = gameCanvas.getContext("2d");
   const W = gameCanvas.width;
@@ -65,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Key handlers for desktop
+  //--- Handlers For Desktop. ---//
   document.addEventListener("keydown", function(e) {
     if (e.key === "ArrowRight") rightPressed = true;
     if (e.key === "ArrowLeft") leftPressed = true;
@@ -76,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (e.key === "ArrowLeft") leftPressed = false;
   });
 
-  // Touch controls for mobile (if buttons exist)
+  //--- Touch Controls For Mobile. ---//
   const btnLeft = document.getElementById("btn-left");
   const btnRight = document.getElementById("btn-right");
   const btnShoot = document.getElementById("btn-shoot");
@@ -157,4 +161,6 @@ document.addEventListener("DOMContentLoaded", function() {
   gameLoop();
 });
 
-
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
