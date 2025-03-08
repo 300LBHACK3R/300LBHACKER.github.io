@@ -32,7 +32,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0,0,0,0.85);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   display: flex;
@@ -66,7 +66,32 @@ body {
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
-  padding: 0.5rem; /* Increased clickable area */
+  padding: 0.5rem;
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* MAIN CONTENT OFFSET */
+main {
+  padding-top: 70px;
 }
 
 /* HERO SECTION */
@@ -172,37 +197,6 @@ footer {
   font-size: 0.9rem;
   color: #999;
 }
-
-/* MEDIA QUERIES (Mobile) */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 1rem;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: block;
-  }
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-}
-
-/* Hide touch controls on bigger screens (optional) */
-@media (min-width: 769px) {
-  .touch-controls {
-    display: none;
-  }
-}
-
 
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
