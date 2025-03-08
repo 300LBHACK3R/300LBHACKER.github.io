@@ -2,6 +2,8 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 /* RESET & GLOBAL STYLES */
 * {
   margin: 0;
@@ -139,6 +141,26 @@ body {
   font-size: 1rem;
 }
 
+/* TOUCH CONTROLS */
+.touch-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.touch-controls button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background: #ff6f61;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.touch-controls button:active {
+  background: #ff9472;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -170,6 +192,14 @@ footer {
     font-size: 2.2rem;
   }
 }
+
+/* Hide touch controls on bigger screens (optional) */
+@media (min-width: 769px) {
+  .touch-controls {
+    display: none;
+  }
+}
+
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
