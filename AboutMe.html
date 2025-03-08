@@ -3,7 +3,6 @@
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
-  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,57 +10,71 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <title>About Me - Tate's Playground</title>
+
+  <title>About Me - Tate's Cosmic Playground</title>
+  <!-- External CSS -->
   <link rel="stylesheet" href="AboutMe.css">
 </head>
 <body>
-  <!-- Starry Background Canvas -->
-  <canvas id="bg-canvas"></canvas>
-  
+
+  <!-- Starry Background Canvas (behind everything) -->
+  <canvas id="stars-canvas"></canvas>
+
   <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Tate's Playground</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-    </nav>
+  <header class="navbar">
+    <div class="logo">Tate's Playground</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about-section">About</a></li>
+      <li><a href="#game-section">Space Invaders</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
   </header>
-  
+
   <!-- Main Content -->
   <main>
     <!-- Hero Section -->
     <section id="hero">
-      <h1>Welcome to My Universe</h1>
-      <p>Explore my journey in tech, security, and creativity as I traverse the cosmos of innovation.</p>
-      <button onclick="scrollToSection('game-section')">Play Space Invaders</button>
+      <div class="hero-text">
+        <h1>Welcome to My Universe</h1>
+        <p>
+          Journey with me through tech, security, and creativity as we explore the cosmos of innovation.
+        </p>
+        <button onclick="scrollToSection('about-section')">Learn More</button>
+      </div>
     </section>
-    
+
     <!-- About Section -->
-    <section id="about">
+    <section id="about-section">
       <h2>About Me</h2>
       <p>
-        I am Tate Byers—a Network IT & Security professional with a passion for solving complex problems through innovative technology. When I'm not coding or securing networks, you'll find me exploring the cosmos of creativity and music. Welcome to my cosmic playground!
+        I'm Tate Byers—a Network IT & Security professional, ethical hacker, and cosmic tinkerer. I thrive on solving complex
+        problems with innovative technology, whether I'm securing networks or building new digital experiences. When I'm not
+        coding, you'll find me exploring music, art, or boxing to keep the creativity flowing.
+      </p>
+      <p>
+        This cosmic playground is a showcase of my passion for pushing boundaries—one byte, beat, and star at a time. Strap in
+        and let's explore!
       </p>
     </section>
-    
-    <!-- Game Section -->
+
+    <!-- Space Invaders Game Section -->
     <section id="game-section">
-      <h2>Space Invaders Game</h2>
+      <h2>Space Invaders</h2>
       <canvas id="game-canvas" width="400" height="300"></canvas>
-      <p>Use the left/right arrow keys to move and space to shoot!</p>
+      <p class="game-instructions">
+        Use <strong>← / →</strong> to move, and <strong>Space</strong> to shoot!
+      </p>
     </section>
   </main>
-  
+
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Tate Byers #300LBHACKER# - Powered by the cosmos.</p>
+    <p>&copy; 2025 Tate Byers #300LBHACKER# - Built with cosmic creativity.</p>
   </footer>
-  
+
+  <!-- External JS -->
   <script src="AboutMe.js"></script>
 </body>
 </html>
