@@ -25,9 +25,11 @@ body {
 
 .dark-mode {
   background-color: #121212;
-  color: #121212;
-  margin-right: 100px;
+  color: #121212; 
+  margin: 0 auto; 
+  max-width: 1200px; 
 }
+
 
 
 /* NAVBAR */
