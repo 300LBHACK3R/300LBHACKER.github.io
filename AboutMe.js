@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     navLinks.classList.toggle('active');
   };
 
+  // (Other JS code like starry background and game code would follow here)
+});
+
   /******************************************************
    * SMOOTH SCROLL
    ******************************************************/
