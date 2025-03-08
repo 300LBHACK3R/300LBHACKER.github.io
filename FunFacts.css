@@ -1,21 +1,17 @@
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/* Root Variables for Fun and Playful Theme */
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+
+/*--- Root Variables For Theme. ---*/
 :root {
     --primary-color: #00FF00;
-    /* Hacker Green */
     --secondary-color: #a71900;
-    /* Darker Green */
     --accent-color: #020300;
-    /* Tomato Red for contrast */
     --text-color: #FFFFFF;
-    /* White Text */
     --font-family: "Courier New", Courier, monospace;
-    /* Hacker Font */
 }
 
-/* Body and Global Styling */
+/*--- Body & Global Styling. ---*/
 body {
     font-family: var(--font-family);
     margin: 0;
@@ -26,7 +22,7 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Basic Navbar Styles */
+/*--- Basic Navbar Styles. ---*/
 .navbar {
   background: #333;
   display: flex;
@@ -54,23 +50,23 @@ body {
   color: #ff6f61;
 }
 
-/* Hamburger Menu (hidden on desktop) */
+/*--- Hamburger Menu. (Only Mobile) ---*/
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
-  padding: 0.3rem;  /* Extra tap area */
+  padding: 0.3rem;
 }
 
-/* Mobile Styles */
+/*--- Mobile Styles. ---*/
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
     background: #444;
     position: absolute;
-    top: 50px;    /* Adjust based on your header height */
+    top: 50px; 
     right: 0;
     width: 180px;
     padding: 1rem;
@@ -83,18 +79,17 @@ body {
   }
 }
 
-/* Fun Facts Section Styling */
+/*--- Fun Facts Section Styling. ---*/
 #fun-facts {
     padding: 50px 0;
     background: #2c2c2c;
     border-radius: 60px;
     margin: 30px auto;
     width: 80%;
-    /* Fun Facts specific width */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Random Facts Section Styling */
+/*--- Random Facts Section. ---*/
 #random-facts {
     font-size: 2.5rem;
     padding: 30px;
@@ -103,7 +98,6 @@ body {
     border-radius: 100px;
     margin: 20px auto;
     width: 70%;
-    /* Random Facts specific width */
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -111,7 +105,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Fun Facts Heading */
+/*--- Fun Facts Heading. ---*/
 h2 {
     font-size: 90px;
     font-weight: bolder;
@@ -122,7 +116,7 @@ h2 {
     margin-top: -10px;
 }
 
-/* Random Facts Heading */
+/*--- Random Facts Heading. ---*/
 #random-facts h2 {
     font-size: 50px;
     font-weight: bolder;
@@ -133,7 +127,7 @@ h2 {
     margin: 40px 0;
 }
 
-/* List Styling for Fun Facts */
+/*--- List Styling. <Fun Facts> ---*/
 .fun-facts-list,
 .random-facts-list {
     list-style-type: none;
@@ -152,13 +146,12 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     width: 70%;
-    /* Fun Facts specific width */
     text-align: center;
     font-weight: bold;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* List Styling for Random Facts */
+/*--- List Styling. <Random Facts> ---*/
 .random-facts-list li {
     font-size: 100px;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
@@ -167,13 +160,12 @@ h2 {
     border-radius: 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     width: 50%;
-    /* Random Facts specific width */
     text-align: center;
     font-weight: bold;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* Hover Effects for Both Fun and Random Facts */
+/*--- Hover Effects For Fun & Random Facts. ---*/
 .fun-facts-list li:hover,
 .random-facts-list li:hover {
     transform: scale(1.05);
@@ -186,7 +178,7 @@ h2 {
     transition: font-weight 0.3s ease, opacity 0.5s ease, transform 0.3s ease;
 }
 
-/* Footer Styling */
+/*--- Footer Styling. ---*/
 footer {
     text-align: center;
     padding: 20px;
@@ -195,40 +187,37 @@ footer {
     margin-top: 40px;
 }
 
-/* Responsive Design */
+/*--- Responsive Design. ---*/
 @media (max-width: 768px) {
 
     #fun-facts,
     #random-facts {
         width: 90%;
         font-weight: bolder;
-        /* Make sections responsive */
     }
 
     .fun-facts-list li,
     .random-facts-list li {
         width: 85%;
         font-weight: bolder;
-        /* Make lists responsive */
     }
 }
 
-/* Base styles for desktop */
+/*--- Base Styles For Desktop. ---*/
 body {
   font-size: 16px;
   padding: 20px;
 }
 
-/* Styles for devices with a max width of 600px (typical mobile size) */
+/*--- Styles For Devices With A Max Width Of 600px. (Typical Mobile Size) ---*/
 @media (max-width: 600px) {
   body {
     font-size: 14px;
     padding: 10px;
   }
-  /* Adjust other elements as needed */
 }
 
 
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
