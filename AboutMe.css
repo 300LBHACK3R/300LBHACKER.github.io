@@ -1,6 +1,5 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* RESET & GLOBAL STYLES */
@@ -107,7 +106,7 @@ body {
 #about-section {
   padding: 3rem 1rem;
   max-width: 800px;
-  margin-top: 5rem;
+  margin: 0 auto;
   text-align: center;
 }
 #about-section h2 {
@@ -203,6 +202,7 @@ footer {
     display: none;
   }
 }
+
 
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
