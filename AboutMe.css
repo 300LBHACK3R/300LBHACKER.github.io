@@ -1,123 +1,175 @@
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/* RESET AND GLOBAL STYLES */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
+    background: linear-gradient(270deg, #0f172a, #1e293b, #00d9ff, #ff007f);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #000000, #2c3e50);
-    color: #f5f5f5;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 30;
-    overflow-x: hidden;
-    position: relative;
+    justify-content: center;
+    gap: 20px;
 }
 
-h1,
-h2 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+.nav-links li {
+    display: inline;
 }
 
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    margin-top: 2rem;
-    animation: pulse 1.5s infinite ease-in-out;
-}
-
-h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    margin-top: 1.5rem;
-}
-
-/* -- PARAGRAPH STYLING. */
-p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 1.5rem auto;
-    text-align: center;
-    color: #cccccc;
-    animation: fadeIn 2s ease-out forwards;
-}
-
-/* -- BUTTON STYLING. */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #ff00ff;
-    color: #fff;
-    text-transform: uppercase;
+.nav-links a {
+    color: #00d9ff;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
-    margin: 2rem auto;
-    display: block;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
 }
 
-.btn:hover {
-    background-color: #ff66cc;
+.nav-links a:hover {
+    color: #ff007f;
     transform: scale(1.1);
-    box-shadow: 0 10px 40px rgba(255, 102, 204, 0.5);
 }
 
-/* -- ANIMATIONS. */
-@keyframes pulse {
-    0% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.5);
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        padding: 10px;
     }
 
-    50% {
-        text-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.7);
+    .nav-links.active {
+        display: flex;
     }
 
-    100% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.5);
+    .menu-toggle {
+        display: block;
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* About Section */
+#About-Me {
+    margin-top: 80px;
+    padding: 50px;
+    text-align: left;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* Base styles for desktop */
-body {
-  font-size: 16px;
-  padding: 20px;
+#About-Me h2 {
+    font-size: 2.5em;
+    color: #00d9ff;
+    border-bottom: 3px solid #ff007f;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
-/* Styles for devices with a max width of 600px (typical mobile size) */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
+#About-Me p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Hero Section */
+#hero {
+    background: url('https://source.unsplash.com/1600x900/?technology,hacker') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.hero-text-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-text {
+    font-size: 1.5em;
+    color: #00d9ff;
+}
+
+/* Fade-in Effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Light Mode */
+.light-mode {
+    background: white;
+    color: black;
+}
+
+.light-mode .navbar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
     padding: 10px;
-  }
-  /* Adjust other elements as needed */
+    background: #ff007f;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
-
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
