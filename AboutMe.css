@@ -25,7 +25,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -1; /* Behind all content */
   background: #000;
 }
 
@@ -34,7 +34,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0,0,0,0.85);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -175,7 +175,7 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0,0,0,0.95);
     position: absolute;
     top: 60px;
     right: 0;
@@ -199,6 +199,7 @@ footer {
     display: none;
   }
 }
+
 
 
 /*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
