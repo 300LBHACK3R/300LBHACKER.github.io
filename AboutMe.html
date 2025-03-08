@@ -4,67 +4,316 @@
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
   
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Security & Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Security Meta Tags -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <title>About Me - Tate Byers</title>
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="AboutMe.css">
+  <title>Mind-Blowing Portfolio - Tate Byers</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: #f0f0f0;
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    /* Navbar */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15,15,15,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #333;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff6f61;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #ff6f61;
+    }
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      color: #f0f0f0;
+      cursor: pointer;
+    }
+    /* Hero Section */
+    #hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff6f61, #ff9472);
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNjQnIGhlaWdodD0nNjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHJlY3Qgd2lkdGg9JzY0JyBoZWlnaHQ9JzY0JyBmaWxsPScjMzMzJy8+PC9zdmc+') repeat;
+      opacity: 0.1;
+    }
+    .hero-content {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: fadeInDown 1s ease-out;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      animation: fadeInUp 1s ease-out;
+    }
+    .hero-content button {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background: #0f0f0f;
+      color: #ff6f61;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .hero-content button:hover {
+      background: #ff6f61;
+      color: #0f0f0f;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* About Section */
+    #about {
+      padding: 4rem 2rem;
+      background: #1a1a1a;
+    }
+    #about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #ff6f61;
+    }
+    #about p {
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+    /* Skills & Cards Section */
+    #cards {
+      padding: 4rem 2rem;
+      background: #0f0f0f;
+    }
+    #cards h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #ff6f61;
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .card.appear {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+    }
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #ff6f61;
+    }
+    .card p {
+      font-size: 0.95rem;
+    }
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background: rgba(15,15,15,0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-links li {
+        padding: 1rem;
+        text-align: center;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
-    <nav class="navbar">
+    <div class="navbar">
+      <div class="logo">Tate Byers</div>
       <ul class="nav-links">
-        <li><a href="index.html">🏠</a></li>
-        <li><a href="Certs.html">🏆 Achievements/Certs 🏆</a></li>
-        <li><a href="FunFacts.html">🎈 Fun Facts 🎈</a></li>
-        <li><a href="Projects.html">Projects 💡</a></li>
-        <li><a href="WebsiteBuilds.html">💡 Website Builds 💡</a></li>
-        <li><a href="Testimonials.html">💬 Testimonials 💬</a></li>
-        <li><a href="Resume.html">Resume 💼📄</a></li>
-        <li><a href="Contact.html">💻 Contact</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cards">Skills</a></li>
+        <li><a href="Contact.html">Contact</a></li>
       </ul>
-    </nav>
+      <!-- Mobile menu toggle -->
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </div>
   </header>
-
-  <!-- About Section (add "fade-in" to animate on scroll if desired) -->
-  <section id="about-me" class="fade-in">
-    <h2>About Me</h2>
-    <p><strong>I am a dedicated Network IT & Security professional</strong> with a passion for solving complex problems through innovative technology solutions. With a strong foundation in programming, ethical hacking, and system administration, I thrive on challenges that push the boundaries of what is possible. I love diving into self-driven projects, exploring new tools, and staying ahead of the curve with the latest tech and security updates.</p>
-    <p>Whether it is designing secure networks, analyzing vulnerabilities, or crafting custom solutions, I am driven by a commitment to excellence and a relentless love for continuous learning. Technology isn’t just my profession—it’s my passion, and I am always eager to apply my skills to make a meaningful impact.</p>
-    <p>But it is not all circuits and code in my world. When I am not troubleshooting network issues, you might find me strumming the guitar or tickling the ivories on the piano. Music is a huge part of my life, fueling my creativity and keeping my spirits high. I also hit the gym for some boxing, keeping both my mind and body sharp. And when it comes to full stack development, I am all in—constantly blending the art of design with the science of code.</p>
-    <p>Let us build a safer, smarter, and more connected world together—one byte, beat, and RAT at a time!</p>
-  </section>
-
-  <!-- Hero Section (also add fade-in if desired) -->
-  <section id="hero" class="fade-in">
-    <div class="hero-text-container">
-      <p class="hero-text">
-        🌟 <strong>Why I Love What I Do</strong> - There is nothing quite like the thrill of breaking down barriers, whether it’s cracking the code to a challenging problem, securing systems against vulnerabilities, or building solutions that make life better. My work allows me to merge creativity with logic, making each project an exciting journey.
-      </p>
-      <p class="hero-text">
-        🤝 <strong>Let us Create Something Great Together!</strong> - Whether you are looking for someone to join forces on an ambitious project, help secure your systems, or simply talk tech, I’m all ears! Let us brainstorm, innovate, and build a better future together. 🔧✨ Let’s break barriers and craft solutions that matter!
-      </p>
+  
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Welcome to My World</h1>
+      <p>I am Tate Byers—network IT & security professional, ethical hacker, and creative technologist. I break barriers with code and passion.</p>
+      <button onclick="scrollToSection('about')">Discover More</button>
     </div>
   </section>
-
-  <!-- Scripts -->
-  <script src="AboutMe.js"></script>
-
+  
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I specialize in crafting secure, innovative solutions that bridge technology and creativity. With extensive experience in network security, programming, and ethical hacking, I turn challenges into opportunities.</p>
+    <p>Beyond the digital realm, I express my creativity through music and art, always striving to blend technical expertise with aesthetic excellence. Let’s build a connected future together!</p>
+  </section>
+  
+  <!-- Skills & Interactive Cards Section -->
+  <section id="cards">
+    <h2>My Skills & Talents</h2>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Networking</h3>
+        <p>Designing and implementing secure, robust networks that keep data flowing safely.</p>
+      </div>
+      <div class="card">
+        <h3>Ethical Hacking</h3>
+        <p>Uncovering vulnerabilities and fortifying systems with cutting-edge security measures.</p>
+      </div>
+      <div class="card">
+        <h3>Full Stack Development</h3>
+        <p>Building scalable, interactive web applications that bring ideas to life.</p>
+      </div>
+      <div class="card">
+        <h3>Creative Design</h3>
+        <p>Combining art and technology to create visually stunning digital experiences.</p>
+      </div>
+    </div>
+  </section>
+  
   <!-- Footer -->
-  <footer id="footer">
-    <p>&copy; 2025 Tate Byers #300LBHACKER#</p>
-    <p>*The way the themes differ on each page reflects my Creativity & Capabilities*</p>
+  <footer>
+    <p>&copy; 2025 Tate Byers #300LBHACKER# - Crafted with passion and innovation.</p>
   </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+    // Smooth scroll to section
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Intersection Observer for card animations
+    const cards = document.querySelectorAll('.card');
+    const observerOptions = { threshold: 0.5 };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    cards.forEach(card => appearOnScroll.observe(card));
+  </script>
 </body>
 </html>
+
 
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
 <!----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎------->
