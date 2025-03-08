@@ -6,16 +6,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById("theme-toggle");
   
-  // Apply dark mode from local storage on page load
+  //---- Apply Dark Mode From Local Storage On Page Load.
   if (localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark-mode");
   }
   
-  // Set toggle button text based on the current mode
+  //---- Set Toggle Button Text Based On The Current Mode.
   if (themeToggle) {
     themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
   
-    // Toggle dark mode on click
+    //---- Toggle Dark Mode On Click.
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
       localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('No element with id "theme-toggle" found.');
   }
   
-  // Certificate filter event listener (if applicable)
+  //---- Certificate Filter Event Listener.
   const certFilter = document.getElementById("cert-filter");
   if (certFilter) {
     certFilter.addEventListener("change", function () {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile nav toggle for the menu
+  //---- Mobile Nav Toggle For The Menu.
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
   
