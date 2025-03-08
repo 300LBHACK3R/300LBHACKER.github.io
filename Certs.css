@@ -1,8 +1,8 @@
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
 
-/* GLOBAL STYLES */
+/*--- GLOBAL STYLES. ---*/
 :root {
     --background: #f9f9f9;
     --background-dark: #121212;
@@ -23,13 +23,12 @@ body {
     transition: var(--transition);
 }
 
-/* DARK MODE STYLES */
+/*--- DARK MODE STYLES. ---*/
 .dark-mode {
   background-color: var(--background-dark);
   color: var(--text-color-dark);
 }
 
-/* Optional: Dark mode tweaks for specific elements */
 .dark-mode .navbar {
     background: var(--card-bg-dark);
 }
@@ -40,7 +39,7 @@ body {
     background: var(--card-bg-dark);
 }
 
-/* NAVBAR */
+/*--- NAVBAR. ---*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -77,13 +76,13 @@ body {
     cursor: pointer;
 }
 
-/* CERTS SECTION */
+/*--- CERTS SECTION. ---*/
 #certs {
     margin-top: 40px;
     padding: 20px;
 }
 
-/* GRID LAYOUT */
+/*--- GRID LAYOUT. ---*/
 .certs-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -110,7 +109,7 @@ body {
     align-items: center;
 }
 
-/* IMAGE ALIGNMENT */
+/*--- IMAGE ALIGNMENT. ---*/
 .cert-card img {
     width: 100%;
     max-width: 200px;
@@ -118,13 +117,13 @@ body {
     margin-bottom: 10px;
 }
 
-/* HOVER EFFECTS */
+/*--- HOVER EFFECTS. ---*/
 .cert-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* RESPONSIVE STYLES */
+/*--- RESPONSIVE STYLES. ---*/
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -157,6 +156,6 @@ body {
 }
 
 
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
