@@ -1,34 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Smooth scroll for internal navigation links (if using hash links)
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      if (this.hash !== "") {
-        e.preventDefault();
-        const hash = this.hash;
-        document.querySelector(hash).scrollIntoView({
-          behavior: 'smooth'
-        });
+  // Mobile menu toggle functionality
+  window.toggleMenu = function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  };
+
+  // Smooth scroll for section navigation
+  window.scrollToSection = function(id) {
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Intersection Observer for card animations
+  const cards = document.querySelectorAll('.card');
+  const observerOptions = { threshold: 0.5 };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
       }
     });
-  });
-
-  // Intersection Observer for scroll-triggered fade-in animations
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = {
-    threshold: 0.5,
-    rootMargin: "0px 0px -50px 0px"
-  };
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('appear');
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
-  
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+  }, observerOptions);
+  cards.forEach(card => appearOnScroll.observe(card));
 });
-
