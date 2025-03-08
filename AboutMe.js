@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   window.addEventListener("resize", resizeStarCanvas);
   resizeStarCanvas();
+
   const stars = [];
   const numStars = 200;
   for (let i = 0; i < numStars; i++) {
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
       invaders.push({ x, y, w: invW, h: invH, alive: true });
     }
   }
+
   // Key handlers for desktop
   document.addEventListener("keydown", function(e) {
     if (e.key === "ArrowRight") rightPressed = true;
@@ -72,7 +74,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (e.key === "ArrowRight") rightPressed = false;
     if (e.key === "ArrowLeft") leftPressed = false;
   });
-  // Touch controls for mobile
+
+  // Touch controls for mobile (if buttons exist)
   const btnLeft = document.getElementById("btn-left");
   const btnRight = document.getElementById("btn-right");
   const btnShoot = document.getElementById("btn-shoot");
@@ -92,9 +95,11 @@ document.addEventListener("DOMContentLoaded", function() {
     btnShoot.addEventListener("touchstart", function(e) { e.preventDefault(); shoot(); });
     btnShoot.addEventListener("mousedown", shoot);
   }
+  
   function shoot() {
     bullets.push({ x: player.x + player.w / 2 - 2, y: player.y, w: 4, h: 10 });
   }
+  
   function updateGame() {
     if (rightPressed && player.x + player.w < W) player.x += player.speed;
     if (leftPressed && player.x > 0) player.x -= player.speed;
@@ -126,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   }
+  
   function drawGame() {
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = "#ff6f61";
@@ -141,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+  
   function gameLoop() {
     updateGame();
     drawGame();
@@ -148,4 +155,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   gameLoop();
 });
+
 
