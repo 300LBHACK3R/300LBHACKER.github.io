@@ -1,172 +1,179 @@
 document.addEventListener("DOMContentLoaded", function() {
-  /* ---------- Mobile Menu & Smooth Scroll ---------- */
+  /******************************************************
+   * MOBILE MENU TOGGLE
+   ******************************************************/
   window.toggleMenu = function() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
   };
 
+  /******************************************************
+   * SMOOTH SCROLL
+   ******************************************************/
   window.scrollToSection = function(id) {
     const section = document.getElementById(id);
     section.scrollIntoView({ behavior: 'smooth' });
   };
 
-  /* ---------- Starry Background Animation ---------- */
-  const bgCanvas = document.getElementById("bg-canvas");
-  const bgCtx = bgCanvas.getContext("2d");
+  /******************************************************
+   * STAR BACKGROUND ANIMATION
+   ******************************************************/
+  const starCanvas = document.getElementById("stars-canvas");
+  const starCtx = starCanvas.getContext("2d");
 
-  function resizeBgCanvas() {
-    bgCanvas.width = window.innerWidth;
-    bgCanvas.height = window.innerHeight;
+  function resizeCanvas() {
+    starCanvas.width = window.innerWidth;
+    starCanvas.height = window.innerHeight;
   }
-  window.addEventListener('resize', resizeBgCanvas);
-  resizeBgCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
 
   const stars = [];
-  const numStars = 150;
+  const numStars = 200;
   for (let i = 0; i < numStars; i++) {
     stars.push({
-      x: Math.random() * bgCanvas.width,
-      y: Math.random() * bgCanvas.height,
+      x: Math.random() * starCanvas.width,
+      y: Math.random() * starCanvas.height,
       radius: Math.random() * 1.5,
       speed: Math.random() * 0.5 + 0.2
     });
   }
 
   function animateStars() {
-    bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
-    bgCtx.fillStyle = "#fff";
+    starCtx.clearRect(0, 0, starCanvas.width, starCanvas.height);
+    starCtx.fillStyle = "#fff";
     stars.forEach(star => {
       star.y += star.speed;
-      if (star.y > bgCanvas.height) {
+      if (star.y > starCanvas.height) {
         star.y = 0;
-        star.x = Math.random() * bgCanvas.width;
+        star.x = Math.random() * starCanvas.width;
       }
-      bgCtx.beginPath();
-      bgCtx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-      bgCtx.fill();
+      starCtx.beginPath();
+      starCtx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      starCtx.fill();
     });
     requestAnimationFrame(animateStars);
   }
   animateStars();
 
-  /* ---------- Space Invaders Game ---------- */
+  /******************************************************
+   * SPACE INVADERS GAME
+   ******************************************************/
   const gameCanvas = document.getElementById("game-canvas");
   const ctx = gameCanvas.getContext("2d");
-  const gameWidth = gameCanvas.width;
-  const gameHeight = gameCanvas.height;
-  let rightPressed = false, leftPressed = false;
 
-  // Player object
+  const W = gameCanvas.width;
+  const H = gameCanvas.height;
+
+  // Player
   const player = {
-    width: 30,
-    height: 15,
-    x: gameWidth / 2 - 15,
-    y: gameHeight - 30,
+    x: W / 2 - 15,
+    y: H - 30,
+    w: 30,
+    h: 15,
     speed: 5
   };
+  let rightPressed = false;
+  let leftPressed = false;
 
-  // Bullets array
+  // Bullets
   const bullets = [];
-  const bulletSpeed = 7;
+  const bulletSpeed = 6;
 
-  // Invaders configuration
+  // Invaders
   const invaders = [];
-  const invaderRows = 3;
-  const invaderCols = 6;
-  const invaderWidth = 30;
-  const invaderHeight = 20;
-  const invaderPadding = 10;
-  const invaderOffsetTop = 30;
-  const invaderOffsetLeft = 30;
-  let invaderDirection = 1; // 1: right, -1: left
+  const rows = 3;
+  const cols = 6;
+  const invW = 30;
+  const invH = 20;
+  const padding = 10;
+  let direction = 1;
 
-  for (let row = 0; row < invaderRows; row++) {
-    for (let col = 0; col < invaderCols; col++) {
-      let invaderX = invaderOffsetLeft + col * (invaderWidth + invaderPadding);
-      let invaderY = invaderOffsetTop + row * (invaderHeight + invaderPadding);
-      invaders.push({ x: invaderX, y: invaderY, width: invaderWidth, height: invaderHeight, status: 1 });
+  // Build invaders
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const x = 30 + c * (invW + padding);
+      const y = 30 + r * (invH + padding);
+      invaders.push({ x, y, w: invW, h: invH, alive: true });
     }
   }
 
-  // Event listeners for key presses
-  document.addEventListener("keydown", keyDownHandler);
-  document.addEventListener("keyup", keyUpHandler);
-
-  function keyDownHandler(e) {
+  // Key handlers
+  document.addEventListener("keydown", e => {
     if (e.key === "ArrowRight") rightPressed = true;
-    else if (e.key === "ArrowLeft") leftPressed = true;
-    else if (e.key === " " || e.key === "Spacebar") {
-      shootBullet();
-    }
-  }
-  function keyUpHandler(e) {
+    if (e.key === "ArrowLeft") leftPressed = true;
+    if (e.key === " " || e.key === "Spacebar") shoot();
+  });
+  document.addEventListener("keyup", e => {
     if (e.key === "ArrowRight") rightPressed = false;
-    else if (e.key === "ArrowLeft") leftPressed = false;
-  }
+    if (e.key === "ArrowLeft") leftPressed = false;
+  });
 
-  function shootBullet() {
-    bullets.push({ x: player.x + player.width / 2 - 2, y: player.y, width: 4, height: 10 });
+  function shoot() {
+    bullets.push({ x: player.x + player.w / 2 - 2, y: player.y, w: 4, h: 10 });
   }
 
   function updateGame() {
     // Move player
-    if (rightPressed && player.x + player.width < gameWidth) player.x += player.speed;
+    if (rightPressed && player.x + player.w < W) player.x += player.speed;
     if (leftPressed && player.x > 0) player.x -= player.speed;
 
     // Update bullets
-    for (let i = 0; i < bullets.length; i++) {
-      bullets[i].y -= bulletSpeed;
-      if (bullets[i].y < 0) {
+    bullets.forEach((b, i) => {
+      b.y -= bulletSpeed;
+      // Remove off-screen
+      if (b.y + b.h < 0) {
         bullets.splice(i, 1);
-        i--;
       }
-    }
+    });
 
     // Move invaders
-    let shouldReverse = false;
-    invaders.forEach(invader => {
-      if (invader.status === 1) {
-        invader.x += invaderDirection;
-        if (invader.x + invader.width > gameWidth || invader.x < 0) {
-          shouldReverse = true;
+    let reverse = false;
+    invaders.forEach(inv => {
+      if (inv.alive) {
+        inv.x += direction;
+        if (inv.x + inv.w > W || inv.x < 0) {
+          reverse = true;
         }
       }
     });
-    if (shouldReverse) {
-      invaderDirection *= -1;
-      invaders.forEach(invader => { invader.y += 10; });
+    if (reverse) {
+      direction *= -1;
+      invaders.forEach(inv => {
+        inv.y += 10;
+      });
     }
 
-    // Collision detection: bullets vs. invaders
-    bullets.forEach((bullet, bIndex) => {
-      invaders.forEach(invader => {
-        if (invader.status === 1 &&
-            bullet.x < invader.x + invader.width &&
-            bullet.x + bullet.width > invader.x &&
-            bullet.y < invader.y + invader.height &&
-            bullet.y + bullet.height > invader.y) {
-          invader.status = 0;
-          bullets.splice(bIndex, 1);
+    // Check collisions (bullets vs invaders)
+    bullets.forEach((b, bi) => {
+      invaders.forEach(inv => {
+        if (inv.alive &&
+            b.x < inv.x + inv.w &&
+            b.x + b.w > inv.x &&
+            b.y < inv.y + inv.h &&
+            b.y + b.h > inv.y) {
+          inv.alive = false;
+          bullets.splice(bi, 1);
         }
       });
     });
   }
 
   function drawGame() {
-    ctx.clearRect(0, 0, gameWidth, gameHeight);
-    // Draw player
+    ctx.clearRect(0, 0, W, H);
+    // Player
     ctx.fillStyle = "#ff6f61";
-    ctx.fillRect(player.x, player.y, player.width, player.height);
-    // Draw bullets
+    ctx.fillRect(player.x, player.y, player.w, player.h);
+    // Bullets
     ctx.fillStyle = "#fff";
-    bullets.forEach(bullet => {
-      ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+    bullets.forEach(b => {
+      ctx.fillRect(b.x, b.y, b.w, b.h);
     });
-    // Draw invaders
+    // Invaders
     ctx.fillStyle = "#fff";
-    invaders.forEach(invader => {
-      if (invader.status === 1) {
-        ctx.fillRect(invader.x, invader.y, invader.width, invader.height);
+    invaders.forEach(inv => {
+      if (inv.alive) {
+        ctx.fillRect(inv.x, inv.y, inv.w, inv.h);
       }
     });
   }
