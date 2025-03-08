@@ -105,6 +105,7 @@ body {
 
 /* ABOUT SECTION */
 #about-section {
+  padding-top: 70px;
   padding: 3rem 1rem;
   max-width: 800px;
   margin-top: 5rem;
