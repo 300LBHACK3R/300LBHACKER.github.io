@@ -1,9 +1,9 @@
 
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ------//
 
-// -- RANDOM FUN FACTS GENERATOR.
+//--- Fun Facts Generator. ---//
 document.addEventListener('DOMContentLoaded', () => {
     const randomFacts = [
         "🚀 The Longest Piece of Code Ever Written Is in a Video Game 🚀",
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             fact.style.fontWeight = "bold";
             fact.style.opacity = "1";
-            fact.style.transform = "scale(1.1)"; // Small pop effect
-        }, index * 500); // Each item pops in after 0.5 seconds
+            fact.style.transform = "scale(1.1)"; 
+        }, index * 500); //--- 5 Seconds. ---//
     });
 });
 
@@ -48,6 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎  -----//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎  -----//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎  -----//
