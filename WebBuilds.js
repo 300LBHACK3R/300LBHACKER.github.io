@@ -13,6 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//--- Smooth Scroll. ---///
+ * Enables Smooth Scroll Internally. 
+ */
+function enableSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetElement = document.querySelector(this.getAttribute("href"));
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+          });
+
 // 📌 Portfolio Item Clicks (Opens in New Tab)
 document.querySelectorAll('.portfolio-item').forEach(item => {
     item.addEventListener('click', function(e) {
