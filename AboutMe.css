@@ -1,10 +1,10 @@
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* RESET & GLOBAL STYLES */
+/*--- Reset & Globe Styles. --*/
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* STAR CANVAS */
+/*--- Star Canvas. ---*/
 #stars-canvas {
   position: fixed;
   top: 0;
@@ -29,7 +29,7 @@ body {
   background: #000;
 }
 
-/* NAVBAR */
+/*--- Navbar. ---*/
 .navbar {
   position: fixed;
   top: 0;
@@ -71,7 +71,7 @@ body {
   padding: 0.5rem;
 }
 
-/* MOBILE NAV */
+/*--- Mobile Nav. ---*/
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -91,14 +91,14 @@ body {
   }
 }
 
-/* MAIN CONTENT OFFSET */
+/*--- Main Content Offset. --*/
 main {
   padding-top: 70px;
 }
 
-/* HERO SECTION */
+/*--- Hero Section. ---*/
 #hero {
-  /* Instead of a fixed 100vh, let the content dictate height. */
+  /*--- Instead Of a Fixed 100VH, Let The Content Choose Height. ---*/
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@ main {
   background: #ff9472;
 }
 
-/* ABOUT SECTION */
+/*--- About. ---*/
 #about-section {
   padding: 3rem 1rem;
   max-width: 800px;
@@ -148,7 +148,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* GAME SECTION */
+/*--- Game SEC. ---*/
 #game-section {
   padding: 3rem 1rem;
   text-align: center;
@@ -172,7 +172,7 @@ main {
   font-size: 1rem;
 }
 
-/* TOUCH CONTROLS */
+/*--- Touch Controls. ---*/
 .touch-controls {
   display: flex;
   justify-content: center;
@@ -192,7 +192,7 @@ main {
   background: #ff9472;
 }
 
-/* FOOTER */
+/*--- Footer. ---*/
 footer {
   text-align: center;
   padding: 1rem;
@@ -201,21 +201,20 @@ footer {
   color: #999;
 }
 
-/* 
-  RESPONSIVE TWEAKS FOR SMALL SCREENS 
-  - Adjust hero text sizes
-  - Make sure nothing gets cut off
-*/
+/*---  RESPONSIVE TWEAKS FOR SMALL SCREENS 
+  - Adjust Hero Text Sizes.
+  - Make sure Nothing Gets Cut The Fuck Off "lol".
+---*/
 @media (max-width: 768px) {
   #hero {
-    padding: 4rem 1rem;   /* More padding for smaller screens */
-    min-height: auto;     /* Let content define height */
+    padding: 4rem 1rem;  
+    min-height: auto;     
   }
   .hero-text h1 {
-    font-size: 2rem;      /* Scale down big text */
+    font-size: 2rem;      
   }
   .hero-text p {
-    font-size: 1rem;      /* Smaller paragraph text */
+    font-size: 1rem;      
   }
 }
 
