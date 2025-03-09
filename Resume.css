@@ -1,9 +1,9 @@
 
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
 
-/* Reset Defaults */
+/*--- Reset Defaults. ---*/
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Body & General */
+/*--- Body & General. ---*/
 body {
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@ body {
     background: #f4f4f4;
 }
 
-/* Navbar - Sleek & Modern */
+/*--- Navbar. (Sleek & Modern) ---*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@ body {
     transition: background 0.3s ease-in-out;
 }
 
-/* Logo Placeholder (Optional) */
+/*--- Logo Placeholder. ---*/
 .navbar .logo {
     font-size: 22px;
     font-weight: bold;
@@ -47,7 +47,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Navigation Links */
+/*--- Navigation Links. ---*/
 .nav-links {
     list-style: none;
     display: flex;
@@ -64,7 +64,7 @@ body {
     position: relative;
 }
 
-/* Cool Hover Effect */
+/*--- Cool Hover Effects. ---*/
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -85,7 +85,7 @@ body {
     color: #f1c40f;
 }
 
-/* Mobile Menu Button */
+/*--- Mobile Menu Button. ---*/
 .menu-toggle {
     font-size: 28px;
     cursor: pointer;
@@ -98,7 +98,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Mobile Responsive */
+/*--- Mobile Responsive. ---*/
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -126,7 +126,7 @@ body {
     }
 }
 
-/* Mobile Navigation */
+/*--- Mobile Navigation. ---*/
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -149,7 +149,7 @@ body {
     }
 }
 
-/* Resume Section */
+/*--- Resume Section. ---*/
 #resume {
     text-align: center;
     padding: 100px 20px 50px;
@@ -197,7 +197,7 @@ body {
     background: #2ecc71;
 }
 
-/* Footer */
+/*--- Footer. ---*/
 footer {
     text-align: center;
     padding: 20px;
@@ -208,7 +208,7 @@ footer {
     width: 100%;
 }
 
-/* Animations */
+/*--- Animations. ---*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -230,6 +230,6 @@ footer {
         transform: translateY(-5px);
     }
 }
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
