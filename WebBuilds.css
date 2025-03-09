@@ -1,10 +1,8 @@
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
 
-/*-------------------------------------------------- 
-  🌐 GLOBAL STYLES - HACKER THEME 🌐
---------------------------------------------------*/
+/*---- Global Styles. ---*/
 * {
     margin: 0;
     padding: 0;
@@ -17,12 +15,10 @@ body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     padding: 20px;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-x: hidden;
 }
 
-/*-------------------------------------------------- 
-  🔥 HEADER & GLITCH EFFECT 🔥
---------------------------------------------------*/
+/*---- Header & Glitch Effect. ------*/
 header {
     text-align: center;
     margin-bottom: 40px;
@@ -40,9 +36,7 @@ header {
     50% { text-shadow: -2px -2px #0f0; }
 }
 
-/*-------------------------------------------------- 
-  📌 NAVBAR STYLING 
---------------------------------------------------*/
+/*------- Navbar Styling. -----*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -52,7 +46,7 @@ header {
     border-bottom: 2px solid #0f0;
 }
 
-/* Navigation Links */
+/*----- Navigation Links. -----*/
 .nav-links {
     list-style: none;
     display: flex;
@@ -71,13 +65,13 @@ header {
     position: relative;
 }
 
-/* Hover effects */
+/*--- Hover Effects. ---*/
 .nav-links a:hover {
     color: #fff;
     transform: translateY(-2px);
 }
 
-/* Underline effect */
+/*--- Underline Effect. ---*/
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -93,7 +87,7 @@ header {
     width: 100%;
 }
 
-/* Mobile Menu Toggle */
+/*--- Mobile Menu Toggle. ---*/
 .menu-toggle {
     font-size: 2rem;
     color: #0f0;
@@ -101,9 +95,7 @@ header {
     display: none;
 }
 
-/*-------------------------------------------------- 
-  📌 PORTFOLIO GRID STYLING 
---------------------------------------------------*/
+/*------ Portfolio Grid Styling. ----*/
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -152,11 +144,8 @@ header {
     color: #000;
 }
 
-/*-------------------------------------------------- 
-  📌 RESPONSIVE DESIGN - MOBILE FIXES
---------------------------------------------------*/
+/*----- Responsive Design. (Mobile)-------*/
 @media (max-width: 768px) {
-    /* 📌 Adjust Navbar for Mobile */
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -193,7 +182,7 @@ header {
         font-size: 1rem;
     }
 
-    /* 📌 Fix Portfolio Grid on Mobile */
+    /*--- Fix Portfolio Grid On Mobile. ---*/
     .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -218,6 +207,6 @@ header {
 }
 
 
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
