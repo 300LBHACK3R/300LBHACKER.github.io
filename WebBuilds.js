@@ -1,9 +1,8 @@
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ------//
 
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-
-// 📌 Mobile Menu Toggle
+//--- Mobile Menu Toggle. ---//
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
@@ -29,7 +28,7 @@ function enableSmoothScroll() {
                 });
           });
 
-// 📌 Portfolio Item Clicks (Opens in New Tab)
+//--- Portfolio Item Clicks. ---//
 document.querySelectorAll('.portfolio-item').forEach(item => {
     item.addEventListener('click', function(e) {
         if (e.target.tagName !== 'A') {
@@ -40,6 +39,6 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
 });
 
 
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
