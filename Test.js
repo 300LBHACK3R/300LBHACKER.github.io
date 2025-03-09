@@ -1,9 +1,8 @@
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
 
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-
-// -- DISPLAYS CURRENT DATE SIMILAR TO NEWSPAPER.
+//--- Displays Current Date. ---//
 function displayDate() {
     let dateElement = document.getElementById("newspaper-date");
     let today = new Date();
@@ -11,7 +10,7 @@ function displayDate() {
     dateElement.innerHTML = today.toLocaleDateString('en-US', options);
 }
 
-// -- ARRAY OF TESTIMONIALS. 
+//--- Array Of Testimonials. ---// 
 const testimonials = [
     "Tate's passion for technology is unmatched. He always delivers high-quality results!",
     "An exceptional professional who brings creativity and technical expertise to every project.",
@@ -31,11 +30,11 @@ function changeTestimonials() {
     index2 = (index2 + 1) % testimonials.length;
 }
 
-// -- TYPEWRITER EFFECT FOR HEADLINES.
+//--- Typewriter Effect On Headlines. ---//
 function typeWriterEffect(text, elementId, speed) {
     let i = 0;
     let element = document.getElementById(elementId);
-    element.innerHTML = ""; // Clear existing text
+    element.innerHTML = "";
     function typing() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
@@ -46,16 +45,16 @@ function typeWriterEffect(text, elementId, speed) {
     typing();
 }
 
-// Run everything on page load
+//--- Run Everything On Page Load. ---//
 window.onload = function() {
     displayDate();
     changeTestimonials();
-    setInterval(changeTestimonials, 8000); // Rotate testimonials every 5s
+    setInterval(changeTestimonials, 8000); //--- Every 5s Rotate. ---//
     typeWriterEffect("💬 What People Are Saying 💬", "headline-1", 75);
     typeWriterEffect("💬 What People Are Saying 💬", "headline-2", 75);
 };
 
 
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
-//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
+//----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------//
