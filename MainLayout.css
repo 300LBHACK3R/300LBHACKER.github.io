@@ -1,18 +1,16 @@
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
 
-/*--------------------------------------------------
-  Root Variables for Theme Colors.
---------------------------------------------------*/
+/*--- Root Variables for Theme Colors. ---*/
 :root {
-    --primary-color: #00FF00; /* Hacker Green */
-    --secondary-color: #B3FFB3; /* Softer Green */
-    --background-color: #000000; /* Black Background */
-    --accent-color: #111111; /* Darker Accent */
-    --hover-background-color: #111111; /* For hover states */
-    --text-color: #FFFFFF; /* White Text */
-    --font-family: "Courier New", Courier, monospace; /* Hacker Font */
+    --primary-color: #00FF00; /*--- Hacker Green. ---*/
+    --secondary-color: #B3FFB3; /*--- Softer Green. ---*/
+    --background-color: #000000; /*--- Black Background. ---*/
+    --accent-color: #111111; /*--- Darker Accent. ---*/
+    --hover-background-color: #111111; /*--- For Hover.---*/
+    --text-color: #FFFFFF; /*--- White Text. ---*/
+    --font-family: "Courier New", Courier, monospace; /*--- Hacker Font. ---*/
 }
 
 body {
@@ -21,29 +19,23 @@ body {
     overflow-x: hidden; /* Prevents horizontal scroll issues */
 }
 
-/*--------------------------------------------------
-  Basic Reset.
---------------------------------------------------*/
+/*--- Basic Reset. ---*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*--------------------------------------------------
-  Enter Site Overlay.
---------------------------------------------------*/
+/*--- Enter Site Overlay. ---*/
 
-/*--------------------------------------------------
-  💀🔥 ULTIMATE HACKER OVERLAY 🔥💀
---------------------------------------------------*/
+/*--- Ultimate Hacker Overlay. ---*/
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height on all devices */
-    background: rgba(0, 0, 0, 0.95); /* Deep black for a dark hacker feel */
+    width: 100vw; 
+    height: 100vh; 
+    background: rgba(0, 0, 0, 0.95); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,28 +45,25 @@ body {
     transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-/* Hidden state */
+/*--- Hidden State. ---*/
 .overlay.hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
-/*--------------------------------------------------
-  🛑 HACKER MODAL - Central Hacking Console 🛑
---------------------------------------------------*/
+/*--- Hacker Modal. (Central Hacking Console) ---*/
 .modal {
-    background: rgba(10, 10, 10, 0.95); /* Semi-transparent dark mode */
+    background: rgba(10, 10, 10, 0.95); /*--- Semi Transpar Dark Mode. ---*/
     padding: 3rem;
     border-radius: 12px;
     text-align: center;
     max-width: 600px;
-    box-shadow: 0 0 40px #00ff00, 0 0 80px rgba(0, 255, 0, 0.8); /* Glowing hacker effect */
+    box-shadow: 0 0 40px #00ff00, 0 0 80px rgba(0, 255, 0, 0.8); /*--- Glowing Hacker Effect. ---*/
     animation: hacker-glitch 1.5s infinite alternate;
     border: 2px solid #00ff00;
 }
 
-/* Hacker-style title */
 .modal h2 {
     font-size: 2rem;
     color: #00ff00;
@@ -83,7 +72,7 @@ body {
     animation: text-flicker 1.5s infinite alternate;
 }
 
-/* Binary text effect */
+/*--- Binary Text Effect. ---*/
 .binary-text {
     font-family: "Courier New", Courier, monospace;
     font-size: 1.5rem;
@@ -93,7 +82,7 @@ body {
     animation: binary-flicker 0.3s infinite alternate;
 }
 
-/* Buttons - Glitchy, Hacker Entry Buttons */
+/*--- Buttons. (Hacker Entry Buttons) ---*/
 .btn-container {
     margin-top: 1.5rem;
     display: flex;
@@ -101,7 +90,7 @@ body {
     justify-content: center;
 }
 
-/* Hacker Neon Buttons */
+/*--- Hacker Neon Buttons. ---*/
 button {
     background: black;
     border: 2px solid #00ff00;
@@ -116,7 +105,7 @@ button {
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* Button Hover - Matrix Glow */
+/*--- Button Hover. (Matrix sTYLE Glow) ---*/
 button:hover {
     background: #00ff00;
     color: black;
@@ -124,32 +113,30 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Button Click */
+/*--- Button Click. ---*/
 button:active {
     background: #ff0000;
     color: black;
     box-shadow: 0 0 20px #ff0000, 0 0 40px rgba(255, 0, 0, 0.8);
 }
 
-/*--------------------------------------------------
-  🔥 GLITCH ANIMATIONS 🔥
---------------------------------------------------*/
+/*--- Glitch Animations. ---*/
 
-/* Flickering Title Effect */
+/*--- Flickering Title Effect. ---*/
 @keyframes text-flicker {
     0% { opacity: 1; }
     50% { opacity: 0.8; }
     100% { opacity: 1; }
 }
 
-/* Flickering Binary Code */
+/*--- Flickering Binary Code. ---*/
 @keyframes binary-flicker {
     0% { opacity: 1; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
     50% { opacity: 0.6; text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000; }
     100% { opacity: 1; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
 }
 
-/* Glitchy Modal Glow */
+/*--- Glitchy Modal Glow. ---*/
 @keyframes hacker-glitch {
     0% { box-shadow: 0 0 10px #00ff00, 0 0 30px rgba(0, 255, 0, 0.7); }
     50% { box-shadow: 0 0 20px #00ff00, 0 0 60px rgba(0, 255, 0, 0.9); }
@@ -158,26 +145,24 @@ button:active {
 
 
 
-/*--------------------------------------------------
-  Hero Section.
---------------------------------------------------*/
+/*--- Hero Section. ---*/
 #hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 10%; /* Reduced padding for smaller screens */
+    padding: 40px 10%; 
     min-height: 10vh;
     background: radial-gradient(circle, var(--background-color) 60%, var(--accent-color) 100%);
     border-bottom: 2px solid var(--primary-color);
-    border-radius: 75px; /* Will be adjusted for mobile */
+    border-radius: 75px;
     box-shadow: 0 8px 20px rgba(0, 255, 0, 0.3);
 }
 
-/* Main Title */
+/*--- Main Title. ---*/
 .main-title {
-    font-size: clamp(3rem, 8vw, 5rem); /* Adjusted for responsiveness */
+    font-size: clamp(3rem, 8vw, 5rem); 
     font-weight: bold;
     color: var(--primary-color);
     text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
@@ -187,7 +172,7 @@ button:active {
     z-index: 1;
 }
 
-/* Sub Title */
+/*--- Sub Title ---*/
 .sub-title {
     font-size: clamp(1.5rem, 4vw, 2rem);
     color: var(--secondary-color);
@@ -197,10 +182,10 @@ button:active {
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* Hero Text */
+/*--- Hero Text. ---*/
 .hero-text,
 .hero-text2 {
-    padding: 20px 10%; /* Responsive padding */
+    padding: 20px 10%; 
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: bold;
     color: var(--secondary-color);
@@ -214,9 +199,7 @@ button:active {
     margin-top: 50px;
 }
 
-/*--------------------------------------------------
-  Resume Section
---------------------------------------------------*/
+/*--- Resume Section. ---*/
 #download-my-resume {
     display: flex;
     justify-content: center;
@@ -245,9 +228,7 @@ button:active {
     transform: scale(1.05);
 }
 
-/*--------------------------------------------------
-  Navbar & Navigation Links
---------------------------------------------------*/
+/*--- Navbar & Navigation Links. ---*/
 .navbar {
     display: flex;
     justify-content: center;
@@ -288,14 +269,11 @@ button:active {
     color: var(--background-color);
 }
 
-/*--------------------------------------------------
-  Responsive Styling
---------------------------------------------------*/
+/*--- Responsive Styling. ---*/
 @media screen and (max-width: 768px) {
     #hero {
         padding: 20px;
-        border-radius: 20px; /* Smaller border radius for mobile */
-    }
+        border-radius: 20px; 
 
     .hero-text,
     .hero-text2 {
@@ -328,9 +306,7 @@ button:active {
     }
 }
 
-/*--------------------------------------------------
-  Keyframes & Animations
---------------------------------------------------*/
+/*--- Keyframes & Animations. ---*/
 @keyframes neon-flicker {
     0% {
         text-shadow: 0 0 15px var(--primary-color);
@@ -344,6 +320,6 @@ button:active {
 }
 
 
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
