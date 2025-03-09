@@ -1,16 +1,16 @@
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/* -- Root Variables for Theme Colors. */@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* ROOT VARIABLES & GLOBAL STYLES */
+/*--- Root Variables & Global StylingS. ---*/
 :root {
-  --primary-color: #00FF00;       /* Hacker Green */
-  --secondary-color: #B3FFB3;     /* Softer Green */
-  --background-color: #000000;    /* Black Background */
-  --accent-color: #111111;        /* Darker Accent */
+  --primary-color: #00FF00;       /*--- Hacker Green. ---*/
+  --secondary-color: #B3FFB3;     /*--- Softer Green. ---*/
+  --background-color: #000000;    /*--- Black Background. ---*/
+  --accent-color: #111111;        /*--- Darker Accent. ---*/
   --hover-background-color: #111111;
   --font-family: "Courier New", monospace;
 }
@@ -27,22 +27,11 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   line-height: 1.6;
-  animation: fadeIn 3s ease-out;  /* Smooth fade-in animation */
+  animation: fadeIn 3s ease-out;
   padding: 20px;
 }
 
-/* STAR CANVAS (if used) */
-#stars-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: var(--background-color);
-}
-
-/* NAVBAR */
+/*--- Navbar. ---*/
 .navbar {
   position: sticky;
   top: 0;
@@ -57,17 +46,17 @@ body {
   align-items: center;
 }
 
-/* HAMBURGER ICON */
+/*--- Hamburger Icon. ---*/
 .menu-toggle {
   display: none;
   font-size: 2rem;
   color: var(--primary-color);
   cursor: pointer;
   padding: 0.5rem;
-  margin-right: 1rem; /* optional spacing */
+  margin-right: 1rem;
 }
 
-/* NAV LINKS */
+/*--- Nav Links. ---*/
 .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -112,25 +101,25 @@ body {
   box-shadow: 0 0 15px var(--primary-color), 0 0 30px rgba(0, 255, 0, 0.6);
 }
 
-/* MOBILE NAVIGATION */
+/*--- Mobile Navigation. ---*/
 @media screen and (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Show hamburger on mobile */
+    display: block;
   }
   .nav-links {
-    display: none; /* Hide nav links by default on mobile */
+    display: none; 
     flex-direction: column;
     gap: 10px;
     background: rgba(0, 0, 0, 0.95);
     position: absolute;
-    top: 60px;  /* Adjust if your navbar is taller */
+    top: 60px; 
     right: 0;
     width: 200px;
     padding: 1rem;
     box-shadow: 0 0 10px var(--primary-color);
   }
   .nav-links.active {
-    display: flex; /* Show when toggled */
+    display: flex;
   }
   .nav-links a {
     font-size: 0.9rem;
@@ -138,12 +127,12 @@ body {
   }
 }
 
-/* MAIN CONTENT OFFSET */
+/*--- Main Content Offset. ---*/
 main {
   padding-top: 70px;
 }
 
-/* CONTACT SECTION (example) */
+/*--- Contact Section. ---*/
 #contact-section {
   max-width: 600px;
   margin: 40px auto;
@@ -211,7 +200,7 @@ form button:hover {
   animation: glowing 1.5s infinite alternate;
 }
 
-/* FOOTER */
+/*--- Footer. ---*/
 footer {
   text-align: center;
   padding: 20px;
@@ -225,7 +214,7 @@ footer p {
   top: 75px;
 }
 
-/* KEYFRAMES & ANIMATIONS */
+/*--- Keyframes & Animations. ---*/
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -269,7 +258,7 @@ footer p {
   }
 }
 
-/* RESPONSIVE TWEAKS FOR SMALL SCREENS */
+/*--- Responsive Tweaks For Small Screens. ---*/
 @media screen and (max-width: 768px) {
   body {
     font-size: 14px;
@@ -292,7 +281,7 @@ footer p {
   form textarea {
     width: 100%;
   }
-  /* Scale down large headings/text as needed */
+  /*--- Scale Down Large Headings And Text As Needed. ---*/
   #fun-facts h2, #random-facts h2 {
     font-size: 2rem;
   }
@@ -301,8 +290,6 @@ footer p {
   }
 }
 
-
-
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------/*
