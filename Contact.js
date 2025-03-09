@@ -1,10 +1,14 @@
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+
 document.addEventListener("DOMContentLoaded", function() {
-  // reCAPTCHA onSubmit callback remains as is:
+  //--- ReCAPTCHA OnSubmit CallBack Remains As Is. ---//
   window.onSubmit = function(token) {
     document.getElementById('contact-form').submit();
   };
 
-  // Hamburger menu toggle
+  //--- Hamburger Menu Toggle. ---//
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
@@ -14,3 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
+//--- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 ---//
