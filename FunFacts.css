@@ -140,6 +140,7 @@ main {
 #fun-facts h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  margin-top: 2rem;
   color: #39ff14; /* balloon vibe color; adjust as you wish */
 }
 .fun-facts-list {
