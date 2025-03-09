@@ -1,28 +1,27 @@
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Stylish Testimonials Theme 🔥 Vintage Newspaper Theme 📰 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
 
-/* Import Google Fonts */
+/*--- Import Google Fonts. ---*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Special+Elite&display=swap');
 
-/* Root Variables */
+/*--- Root Variables. ---*/
 :root {
     --background-color: #F5F5F5;
-    /* Light paper gray */
+    /*--- Light Paper Gray. ---*/
     --text-color: #222;
-    /* Dark ink black */
+    /*--- Dark Ink Black. ---*/
     --accent-color: #A52A2A;
-    /* Deep red for slight highlights */
+    /*--- Deep Red. ---*/
     --border-color: #999;
-    /* Soft gray for dividers */
+    /*--- Soft Gray For Dividers. ---*/
     --font-body: "Playfair Display", serif;
-    /* Elegant serif */
+    /*--- Elegant Serif. ---*/
     --font-title: "Special Elite", cursive;
-    /* Typewriter font */
+    /*--- Typewriter Font. ---*/
 }
 
-/* Body */
+/*--- Body. ---*/
 body {
     background: url('https://www.transparenttextures.com/patterns/white-wall.png');
     background-color: var(--background-color);
@@ -33,7 +32,7 @@ body {
     padding: 0;
 }
 
-/* Header */
+/*--- Header. ---*/
 header {
     background: #fff;
     padding: 20px;
@@ -65,19 +64,17 @@ header {
     color: var(--accent-color);
 }
 
-/* Testimonials Container - Side by Side Layout */
+/*--- Testimonials Container. (Side by Side LayO) ---*/
 #testimonials-container {
     display: flex;
     justify-content: center;
     gap: 50px;
-    /* Space between boxes */
     max-width: 1200px;
     margin: 50px auto;
     flex-wrap: wrap;
-    /* Allows wrapping for smaller screens */
 }
 
-/* Individual Testimonial Boxes */
+/*--- Individual Testimonial Boxes. ---*/
 .testimonial-box {
     background: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -85,12 +82,11 @@ header {
     padding: 30px;
     text-align: left;
     width: 45%;
-    /* Each box takes up 45% of the width */
     min-height: 250px;
     border-radius: 10px;
 }
 
-/* Headline Styles */
+/*--- Headline Styles. ---*/
 .testimonial-box h2 {
     font-size: 30px;
     font-family: var(--font-title);
@@ -104,7 +100,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* Bouncing Emoji Animation */
+/*--- Bouncing Emoji Animation. ---*/
 @keyframes bounce {
 
     0%,
@@ -117,17 +113,15 @@ header {
     }
 }
 
-/* Apply animation to emoji */
+/*--- Apply Animation To Emoji. ---*/
 .emoji {
     display: inline-block;
     animation: bounce s infinite ease-in-out;
     font-size: 1.2em;
-    /* Adjust emoji size */
     margin: 0 5px;
-    /* Spacing around emoji */
 }
 
-/* Testimonial Text */
+/*--- Testimonial Text. ---*/
 .testimonial-box blockquote {
     font-size: 22px;
     font-style: italic;
@@ -139,7 +133,7 @@ header {
     position: relative;
 }
 
-/* Footer */
+/*--- Footer. ---*/
 footer {
     background: #fff;
     color: var(--text-color);
@@ -150,7 +144,7 @@ footer {
     margin-top: 50px;
 }
 
-/* Newspaper Date */
+/*--- Newspaper Date. ---*/
 .newspaper-date {
     font-family: var(--font-title);
     font-size: 18px;
@@ -159,7 +153,7 @@ footer {
     margin-top: 5px;
 }
 
-/* Responsive - Stacks on Small Screens */
+/*--- Responsive. (Stacks on Small Screens) ---*/
 @media screen and (max-width: 768px) {
     #testimonials-container {
         flex-direction: column;
@@ -168,26 +162,24 @@ footer {
 
     .testimonial-box {
         width: 90%;
-        /* Full width on small screens */
         margin: 0 auto;
     }
 }
 
-/* Base styles for desktop */
+/*--- Base Styles For Desktop. ---*/
 body {
   font-size: 16px;
   padding: 20px;
 }
 
-/* Styles for devices with a max width of 600px (typical mobile size) */
+/*--- Styles For Devices With A Max Width Of 600px. (Typical Mobile Size) ---*/
 @media (max-width: 600px) {
   body {
     font-size: 14px;
     padding: 10px;
   }
-  /* Adjust other elements as needed */
 }
 
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------/*
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
