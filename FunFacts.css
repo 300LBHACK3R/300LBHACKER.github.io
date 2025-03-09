@@ -1,10 +1,10 @@
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎-------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* RESET & GLOBAL STYLES */
+/*--- Reset & Glob Styles. ---*/
 * {
   margin: 0;
   padding: 0;
@@ -18,18 +18,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* STAR CANVAS (if used) */
-#stars-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: #000; /* fallback color */
-}
-
-/* NAVBAR */
+/*--- Navbar. ---*/
 .navbar {
   position: fixed;
   top: 0;
@@ -54,7 +43,7 @@ body {
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
-  padding: 0.5rem; /* easier tap area on mobile */
+  padding: 0.5rem; 
 }
 .nav-links {
   list-style: none;
@@ -71,7 +60,7 @@ body {
   color: #ff6f61;
 }
 
-/* MOBILE NAV */
+/*--- Mobile Nav. ---*/
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -91,14 +80,13 @@ body {
   }
 }
 
-/* MAIN CONTENT OFFSET (if using a fixed navbar) */
+/*--- Main Content Offset. ---*/
 main {
-  padding-top: 70px; /* ensures content isn't hidden behind navbar */
+  padding-top: 70px; 
 }
 
-/* HERO SECTION (if used) */
+/*--- Hero Section. ---*/
 #hero {
-  /* Let the content define height so it doesn't overflow on small screens */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -130,7 +118,7 @@ main {
   background: #ff9472;
 }
 
-/* FUN FACTS SECTION */
+/*--- Fun Facts Section. ---*/
 #fun-facts {
   text-align: center;
   padding: 3rem 1rem;
@@ -141,7 +129,7 @@ main {
   font-size: 3rem;
   margin-bottom: 1rem;
   margin-top: 2rem;
-  color: #39ff14; /* balloon vibe color; adjust as you wish */
+  color: #39ff14; 
 }
 .fun-facts-list {
   list-style: none;
@@ -152,7 +140,7 @@ main {
   margin-bottom: 1rem;
 }
 
-/* RANDOM FACTS SECTION */
+/*--- Random Facts SEC. ---*/
 #random-facts {
   text-align: center;
   padding: 3rem 1rem;
@@ -183,7 +171,7 @@ main {
   background: #ff9472;
 }
 
-/* ABOUT SECTION (if used) */
+/*--- About SEC. ---*/
 #about-section {
   padding: 3rem 1rem;
   max-width: 800px;
@@ -201,51 +189,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* GAME SECTION (if used) */
-#game-section {
-  padding: 3rem 1rem;
-  text-align: center;
-}
-#game-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ff6f61;
-}
-#game-canvas {
-  border: 2px solid #ff6f61;
-  background: #000;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-.game-instructions {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-
-/* TOUCH CONTROLS (if used) */
-.touch-controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.touch-controls button {
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
-  background: #ff6f61;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.touch-controls button:active {
-  background: #ff9472;
-}
-
-/* FOOTER */
+/*--- Footer. ---*/
 footer {
   text-align: center;
   padding: 1rem;
@@ -254,7 +198,7 @@ footer {
   color: #999;
 }
 
-/* RESPONSIVE TWEAKS FOR SMALL SCREENS */
+/*--- Respons, Small Screens. ---*/
 @media (max-width: 768px) {
   #hero {
     padding: 4rem 1rem;
@@ -267,10 +211,10 @@ footer {
     font-size: 1rem;
   }
   #fun-facts h2 {
-    font-size: 2rem;  /* scale down big text */
+    font-size: 2rem;  
   }
   .fun-facts-list {
-    font-size: 1rem;  /* smaller text for fun facts */
+    font-size: 1rem;  
   }
   #random-facts h2 {
     font-size: 1.8rem;
@@ -280,6 +224,6 @@ footer {
   }
 }
 
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
-/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity 😎-------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
+/*----- 2025 Tate R.A Byers - Crafted with Intellect and Ingenuity. 😎 -------*/
