@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // 1) reCAPTCHA onSubmit callback remains as is
+  // Keep your onSubmit function as is:
   window.onSubmit = function(token) {
     document.getElementById('contact-form').submit();
   };
 
-  // 2) Hamburger menu toggle
+  // Then add the hamburger toggle logic:
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', function() {
-      console.log("Hamburger clicked");
+      // Toggle the .active class on nav-links
       navLinks.classList.toggle('active');
     });
   }
